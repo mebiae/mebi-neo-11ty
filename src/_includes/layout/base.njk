@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% if title %}
+                {{title}}
+                {% if title and sub %}
+                    - {{sub}}
+                {% endif %}
+            {% elif sub %}
+                Mebi County - {{sub}}
+            {% else %}
+                Mebi County
+            {% endif %}
+        </title>
+        <!--<link rel="icon" type="image/x-icon" href="/placeholder.png">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:url" content="https://afellowu.neocities.org/">
+        <meta property="og:type" content="website" />
+
+        {% if metatitle %}
+        <meta property="og:title" content="{{metatitle}}"/>
+        {% else %}
+        <meta property="og:title" content="{{site.title}}"/>
+        {% endif %}
+
+        {% if desc %}
+        <meta property="og:description" content="{{desc}}"/>
+        {% else %}
+        <meta property="og:description" content="A place where I share the many stuff that I want to share. Enjoy your stay, in Mebi County."/>
+        {% endif %}
+
+        <!--<meta property="og:image" content="https://afellowu.neocities.org/images/thumbnail.png" />
+        <meta property="twitter:card" content="summary_large_image">-->
+        <link rel="stylesheet" type="text/css" href="/assets/css/styles/mebi.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/base.css" />
+    </head>
+    <body>
+        <div id="page">
+            <div id="flex">
+                {{ content | safe }}
+            </div>
+        </div>
+    </body>
+</html>

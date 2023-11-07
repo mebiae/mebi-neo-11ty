@@ -1,0 +1,32 @@
+/*Font loading*/
+
+@font-face {
+    font-family: POMono;
+    src: url(../fonts/PixelOperatorMono.ttf);
+}
+
+/*HTML related*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {  
+    color: white;
+    font-family: POMono;
+}
+
+#flex {
+    display: flex;
+}
+
+#page {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 15px;
+    flex: 1;
+    order: 1;
+}

@@ -8,3 +8,35 @@ metatitle:
 layout: layout/base.njk
 ---
 
+<main>
+    <div class="box">
+        <h1>Formal Greeting</h1>
+        <p>Lorem ipsum all of that stuff duh</p>
+    </div>
+
+    <div class="box">
+        <h1>Changelogs</h1>
+        <p>Updates here and all of that stuff duh</p>
+    </div>
+
+    <div class="box">
+        <h1>Recent Blogs</h1>
+        {% for post in collections.blog | limit(5) %}
+            <p><a href="{{post.filePathStem}}">{{ post.data.sub }}</a> - {{ post.data.desc }}</p>
+        {% endfor %}
+
+        <h3><a href="">See more --&gt;</a></h3>
+    </div>
+</main>
+
+<aside>
+    {% include "./_includes/partials/sidenav.njk" %}
+    <div class="box">
+        <h1>Sidebar</h1>
+        <p>I never knew this</p>
+    </div>
+    <div class="box">
+        <h1>To-do list</h1>
+        <li>Tune this site to my likings</li>
+    </div>
+</aside>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>
@@ -33,11 +33,11 @@
 
         <!--<meta property="og:image" content="https://afellowu.neocities.org/images/thumbnail.png" />
         <meta property="twitter:card" content="summary_large_image">-->
-        <link rel="stylesheet" type="text/css" href="/assets/css/styles/mebi.css" />
-        <link rel="stylesheet" type="text/css" href="/assets/css/base.css" />
+        <link rel="stylesheet" type="text/css" href="/css/base.css" />
     </head>
     <body>
         <div id="page">
+            {% include "../partials/navbar.njk" %}
             <div id="flex">
                 {{ content | safe }}
             </div>

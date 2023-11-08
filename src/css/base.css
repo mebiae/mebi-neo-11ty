@@ -14,6 +14,8 @@
 body {  
     color: white;
     font-family: POMono;
+    background-color: black;
+    line-height: 1.2em;
 }
 
 #flex {
@@ -21,19 +23,62 @@ body {
 }
 
 #page {
-    max-width: 1150px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
-main {
-    padding: 15px;
+a,
+a:visited {
+    color: white;
+}
+
+a:active,
+a:hover {
+    color: darkgreen;
+}
+
+main,
+article {
     flex: 1;
     order: 1;
 }
 
 aside {
     order: 2;
-    margin-left: 8px;
     width: 250px;
+    margin-left: 10px;
+}
+
+aside > div.sidebar > li a {
+    font-weight: normal;
+    font-size: 1.22em;
+}
+
+aside > div.sidebar > li {
+    list-style: "✩ ";
+    line-height: 2em;
+}
+
+aside > div.sidebar > li a:hover,
+aside > div.sidebar > li:hover  {
+    position: relative;
+    top: -3px;
+}
+
+.box,
+.sidebar {
+    border: 2px solid blue;
+    background-color: navy;
     padding: 15px;
+    margin-bottom: 10px;
+}
+
+nav {
+    border: 2px solid blue;
+    background-color: navy;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

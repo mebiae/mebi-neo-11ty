@@ -1,0 +1,17 @@
+---
+title: MebiBlogs
+sub: 
+
+desc:
+metatitle:
+
+layout: layout/base.njk
+---
+
+<main>
+    <section>
+        {% for post in collections.blog %}
+            <p><a href="{{post.filePathStem}}">{{ post.data.sub }}</a> - {{ post.data.desc }}</p>
+        {% endfor %}
+    </section>
+</main>

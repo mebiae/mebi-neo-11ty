@@ -5,6 +5,16 @@
     src: url(../fonts/PixelOperatorMono.ttf);
 }
 
+@font-face {
+    font-family: NEC;
+    src: url(../fonts/Web437_NEC_APC3_8x16.woff) format("woff");
+}
+
+@font-face {
+    font-family: DOS;
+    src: url(../fonts/Web437_DOS-V_TWN16.woff) format("woff");
+}
+
 /*HTML related*/
 
 * {
@@ -12,10 +22,16 @@
 }
 
 body {  
-    color: white;
-    font-family: POMono;
-    background-color: black;
+    color: #d4fff2;
+    font-family: NEC;
+    background-color: #08131a;
     line-height: 1.2em;
+}
+
+h1,
+h2 {
+    font-weight: normal;
+    font-family: DOS;
 }
 
 #flex {
@@ -29,56 +45,96 @@ body {
 
 a,
 a:visited {
-    color: white;
+    color: #00ffb3;
+    text-decoration: none;
 }
 
 a:active,
 a:hover {
-    color: darkgreen;
+    color: #00d9ff;
 }
 
-main,
-article {
+main {
     flex: 1;
     order: 1;
 }
 
 aside {
     order: 2;
-    width: 250px;
+    width: 230px;
     margin-left: 10px;
 }
 
-aside > div.sidebar > li a {
+aside > article.sidebar > a li,
+aside > article.sidebar > ul a li {
+    color: #d4fff2;
     font-weight: normal;
-    font-size: 1.22em;
 }
 
-aside > div.sidebar > li {
+aside > article.sidebar > a li,
+aside > article.sidebar > ul {
     list-style: "✩ ";
     line-height: 2em;
 }
 
-aside > div.sidebar > li a:hover,
-aside > div.sidebar > li:hover  {
+aside > article.sidebar > a li:hover,
+aside > article.sidebar > ul li:hover  {
+    color: #00d9ff;
     position: relative;
     top: -3px;
 }
 
-.box,
-.sidebar {
-    border: 2px solid blue;
-    background-color: navy;
+aside > article.sidebar > ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+article,
+section {
+    border: 2px solid #14291e;
+    background-color: #09140e;
     padding: 15px;
     margin-bottom: 10px;
 }
 
 nav {
-    border: 2px solid blue;
-    background-color: navy;
+    border: 2px solid #14291e;
+    background-color: #09140e;
     padding: 15px;
     margin-bottom: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+}
+
+nav a {
+    font-size: 1.17em;
+    text-align: center;
+    width: 150px;
+}
+
+@media (min-width:790px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width:790px) {
+    #flex,
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin-bottom: 8px;
+    }
+
+    aside {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    aside > .sidebar {
+        display: none;
+    }
 }

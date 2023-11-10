@@ -13,7 +13,7 @@ layout: layout/base.njk
         <h1>Blogs</h1>
         <p>Here is the place where I just talk about stuff. From my life, to stuff, to whatever.</p>
         <hr>
-        {% for post in collections.blog | reverse %}
+        {% for post in collections.blogs | reverse %}
             <p><a href="{{ post.filePathStem }}">{{ post.data.sub }}</a> - {{ post.data.desc }}</p>
         {% endfor %}
     </section>

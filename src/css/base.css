@@ -15,6 +15,22 @@
     src: url(../fonts/Web437_DOS-V_TWN16.woff) format("woff");
 }
 
+/*Scrollbar*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #08131a;
+    border-radius: 50px;
+    border: 2px solid #0b6335;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b6335;
+}
+
 /*HTML related*/
 
 * {
@@ -29,14 +45,16 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-weight: normal;
     font-family: DOS;
 }
 
-h3 {
-    font-weight: normal;
+main h1 {
+    font-size: 2em;
 }
+
 
 #flex {
     display: flex;
@@ -125,6 +143,7 @@ nav {
 }
 
 nav a {
+    font-family: DOS;
     font-size: 1.17em;
     text-align: center;
     width: 150px;
@@ -133,7 +152,7 @@ nav a {
 #update {
     overflow: auto;
     max-width: auto;
-    max-height: 160px;
+    max-height: 200px;
     border: 2px solid #0b6335;
     padding: 0 15px;
 }
@@ -141,9 +160,7 @@ nav a {
 #update h2 {
     padding: 5px;
     max-width: 100%;
-    font-weight: bold;
     background-color: #0b6335;
-    font-family: NEC;
 }
 
 @media (min-width:700px) {

@@ -21,12 +21,25 @@ layout: layout/base.njk
     <article class="update">
         <h1>Changelog</h1>
         <div id="update">
-            
+            {% for update in updates | reverse | limit(5) %}
+                <h2>{{ update.date }}</h2>
+                <ul>
+                    <li>{{ update.update }}</li>
+                </ul>
+            {% endfor %}
         </div>
     </article>
 
     <article>
         <h1>Recent Blogs</h1>
+
+        {% for post in collections.blogs | reverse | limit(3) %}
+            <div class="blogposts">  
+                <h2><a href="{{ post.filePathStem }}">{{ post.data.sub }}</a></h2>
+                <p>{{ post.data.blogdesc }}</p>
+                <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
+            </div>
+        {% endfor %}
 
         <h3><a href="/blog">See more --&gt;</a></h3>
     </article>

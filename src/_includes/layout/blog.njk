@@ -1,8 +1,40 @@
 ---
 title: MebiBlogs
-layout: base.njk
+
+layout: layout/base.njk
 ---
 
+<style>
+    .blogposts {
+        margin: 2em 0;
+    }
+
+    .blognav {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .blognav a {
+        text-align: center;
+        background-color: #141a3e;
+        padding: 1em;
+    }
+</style>
+
+{% set prevPost = collections.blogs | getPreviousCollectionItem %}
+{% set nextPost = collections.blogs | getNextCollectionItem %}
+
 <main>
-    <article>{{ content | safe }}</article>
+    <article>
+        <h1>{{ sub }}</h1>
+        <blockquote>{{ blogdesc }}</blockquote>
+        <small>Posted on {{ page.date.toLocaleDateString("en-CA") }}</small>
+        {{ content | safe }}
+
+        <div class="blognav">
+            {% if prevPost %}<a href="{{ prevPost.url }}">&lt;-- Previous Post</a>{% endif %}
+            {% if nextPost %}<a href="{{ nextPost.url }}">Next Post --&gt;</a>{% endif %}
+        </div>
+    </article>
 </main>

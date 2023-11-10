@@ -1,0 +1,75 @@
+---
+title: 404
+sub: Uh Oh!
+
+desc:
+metatitle:
+
+layout: layout/base.njk
+---
+
+<style>
+    /*Huh, this works somehow.*/
+    .to:hover {
+        position: relative;
+        top: -5px;
+    }
+
+    .hover {
+        cursor: pointer;
+    }
+
+    .resp {
+        max-width: 100%;
+        height: auto;
+        width: 150px;
+    }
+
+    #container {
+        display:flex;
+        justify-content: center;
+        gap: 6em;
+    }
+
+    @media (max-width:700px) {
+        #container {
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        nav {
+            display: none; /*???*/
+        }
+    }
+</style>
+
+<main>
+    <article style="text-align: center;">
+        <h1>Not Found!</h1>
+        <p>404, oops. Maybe check the address bar again, have you misspelt it? If not, the page might be gone temporarily or permanently, or that I haven't added this page yet.</p>
+        
+        <div id="container">
+            <div class="to">
+                <a href="/">
+                    <h3>Return Home</h3>
+                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                </a>
+            </div>
+
+            <div class="to hover">
+                <a onclick="history.back()">
+                    <h3>Go Back</h3>
+                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                </a>
+            </div>
+
+            <div class="to">
+                <a href="">
+                    <h3>Use the Sitemap</h3>
+                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                </a>
+            </div>
+        </div>
+        
+    </article>
+</main>

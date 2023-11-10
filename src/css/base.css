@@ -34,6 +34,10 @@ h2 {
     font-family: DOS;
 }
 
+h3 {
+    font-weight: normal;
+}
+
 #flex {
     display: flex;
 }
@@ -65,6 +69,10 @@ aside {
     margin-left: 10px;
 }
 
+hr {
+    border: 1px solid #0b6335;
+}
+
 aside > article.sidebar > a li,
 aside > article.sidebar > ul a li {
     color: #d4fff2;
@@ -91,15 +99,24 @@ aside > article.sidebar > ul {
 
 article,
 section {
-    border: 2px solid #14291e;
-    background-color: #09140e;
+    border: 2px solid #0b6335;
+    background-color: #0d112b;
     padding: 15px;
     margin-bottom: 10px;
 }
 
+footer {
+    border: 2px solid #0b6335;
+    background-color: #0d112b;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 nav {
-    border: 2px solid #14291e;
-    background-color: #09140e;
+    border: 2px solid #0b6335;
+    background-color: #0d112b;
     padding: 15px;
     margin-bottom: 10px;
     display: flex;
@@ -113,13 +130,29 @@ nav a {
     width: 150px;
 }
 
-@media (min-width:790px) {
+#update {
+    overflow: auto;
+    max-width: auto;
+    max-height: 160px;
+    border: 2px solid #0b6335;
+    padding: 0 15px;
+}
+
+#update h2 {
+    padding: 5px;
+    max-width: 100%;
+    font-weight: bold;
+    background-color: #0b6335;
+    font-family: NEC;
+}
+
+@media (min-width:700px) {
     nav {
         display: none;
     }
 }
 
-@media (max-width:790px) {
+@media (max-width:700px) {
     #flex,
     nav {
         flex-wrap: wrap;

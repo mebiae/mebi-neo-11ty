@@ -11,22 +11,29 @@ layout: layout/base.njk
 <main>
     <article>
         <h1>Welcome to Mebi County!</h1>
-        <p>Greetings, traveler. This is my place where I'll talk about and share my stuff here and other things. Venture around in this here county, and I hoep you'll feel cozy.</p>
+        <p>Greetings, traveler. This is my place where I'll talk about and share my stuff here and other things. Venture around in this here county, and I hope you'll feel cozy.</p>
 
-        <p>I've been programming since 2020, first starting with Lua. It was not until 2023 when I started on HTML and CSS after seeing a Tumblr post that led to Neocities. Now, I just enjoy maintaining my website and adding more stuff.</p>
+        <p>I've been programming since 2015, first starting off with Scratch. Around 2020-2021 is when I started to learn Lua. It was not until 2023 when I started on HTML and CSS after seeing a Tumblr post that led to Neocities. Now, I just enjoy maintaining my website and adding more stuff.</p>
 
-        <p>Most of the site's code here is written by me. Feel free to use the code to help you make your own website! However, I don't want to see retextured copies of my website.</p>
+        <p>Most of the site's code here is written by me. Feel free to use the code to help you make your own website!</p>
     </article>
 
-    <article>
+    <article class="update">
         <h1>Changelog</h1>
-        <p>Updates here and all of that stuff duh</p>
+        <div id="update">
+            {% for update in updates | limit(5) %}
+                <h2>{{ update.date }}</h2>
+                <ul>
+                    <li>{{ update.update }}</li>
+                </ul>
+            {% endfor %}
+        </div>
     </article>
 
     <article>
         <h1>Recent Blogs</h1>
-        {% for post in collections.blog | limit(5) %}
-            <p><a href="{{post.filePathStem}}">{{ post.data.sub }}</a> - {{ post.data.desc }}</p>
+        {% for post in collections.blog | reverse %}
+            <p><a href="{{ post.filePathStem }}">{{ post.data.sub }}</a> - {{ post.data.desc }}</p>
         {% endfor %}
 
         <h3><a href="/blog">See more --&gt;</a></h3>

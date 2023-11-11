@@ -1,0 +1,13 @@
+:root {
+    --text: #ddeefc;
+    --background: #06080e;
+    --bg-image: url();
+
+    --a-link: #38a5ff;
+    --a-hover: #ffae00;
+    
+    --box-border: #0f1a15;
+    --box-back: #08110c;
+
+    --radius: 0;
+}

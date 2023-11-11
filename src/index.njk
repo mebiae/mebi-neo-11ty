@@ -13,9 +13,9 @@ layout: layout/base.njk
         <h1>Welcome to Mebi County!</h1>
         <p>Greetings, traveler. This is my place where I'll talk about and share my stuff here and other things. Venture around in this here county, and I hope you'll feel cozy.</p>
 
-        <p>I've been programming since 2015, first starting off with Scratch. Around 2020-2021 is when I started to learn Lua. It was not until 2023 when I started on HTML and CSS after seeing a Tumblr post that led to Neocities. Now, I just enjoy maintaining my website and adding more stuff.</p>
+        <p>I've been programming since 2015, first starting off with Scratch. Around 2020-2021 is when I started to learn Lua. It was not until 2023 when I started learning HTML and CSS after seeing a Tumblr post that led to Neocities. Now, I just enjoy maintaining my website and adding more stuff.</p>
 
-        <p>Most of the site's code here is written by me. Feel free to use the code to help you make your own website!</p>
+        <p>Most of the site's code here is written by me. Feel free to use the code to help you make your own website! I know you can do it!</p>
     </article>
 
     <article class="update">
@@ -49,10 +49,19 @@ layout: layout/base.njk
     {% include "./_includes/partials/sidenav.njk" %}
     <article>
         <h1>The Misc Box</h1>
+
+        {% include "./_includes/partials/styleswitcher.njk" %}
+        
         <p>I never knew this</p>
     </article>
     <article>
         <h1>To-do list</h1>
+        <ul>
         <li>Tune this site to my likings</li>
+        <li>Add new styles</li>
+        <li>Add a Lua tutorial page</li>
+        <li>Make an interactive map of Aethepor</li>
+        <li>Add more sites in the Sites page</li>
+        </ul>
     </article>
 </aside>

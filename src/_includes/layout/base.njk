@@ -33,14 +33,19 @@
 
         <!--<meta property="og:image" content="https://afellowu.neocities.org/images/thumbnail.png" />
         <meta property="twitter:card" content="summary_large_image">-->
+        <link rel="stylesheet" type="text/css" href="/css/styles/welcome.css" />
         <link rel="stylesheet" type="text/css" href="/css/base.css" />
     </head>
     <body>
         <div id="page">
+            <div style="display: flex;justify-content: center;">
+                <img id="banner" style="image-rendering: pixelated;max-width: 100%;" src="/images/themes/banner_sign.png" alt="Website Banner">
+            </div>
             {% include "../partials/navbar.njk" %}
             <div id="flex">
                 {{ content | safe }}
             </div>
+            <script type="text/javascript" src="/js/styleswitcher.js"></script>
             {% include "../partials/footer.njk" %}
         </div>
     </body>

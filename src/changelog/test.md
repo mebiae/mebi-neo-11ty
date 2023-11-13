@@ -1,0 +1,2 @@
+- Discard what I said earlier.
+- This way is fine.

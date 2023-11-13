@@ -1,0 +1,28 @@
+---
+title: 
+sub: Changelog
+
+desc:
+metatitle:
+
+layout: layout/base.njk
+---
+
+<main>
+    <article>
+        <h1>Changelog</h1>
+        <div id="update" style="max-height: 1000px;">
+            {% for log in collections.changelog | reverse | limit(5) %}
+                <h2>{{ log.date.toLocaleDateString("en-CA") }}</h2>
+                {{ log.content | safe }}
+            {% endfor %}
+        </div>
+    </article>
+</main>
+
+<aside>
+    {% include "./_includes/partials/sidenav.njk" %}
+    <article>
+        {% include "./_includes/partials/styleswitcher.njk" %}
+    </article>
+</aside>

@@ -20,14 +20,15 @@ layout: layout/base.njk
 
     <article class="update">
         <h1>Changelog</h1>
+
         <div id="update">
-            {% for update in updates | reverse | limit(5) %}
-                <h2>{{ update.date }}</h2>
-                <ul>
-                    <li>{{ update.update }}</li>
-                </ul>
+            {% for log in collections.changelog | reverse | limit(5) %}
+            <h2>{{ log.date.toLocaleDateString("en-CA") }}</h2>
+            {{ log.content | safe }}
             {% endfor %}
         </div>
+        
+        <h3><a href="/changelog">Full changelog --&gt;</a></h3>
     </article>
 
     <article>
@@ -57,11 +58,12 @@ layout: layout/base.njk
     <article>
         <h1>To-do list</h1>
         <ul>
-        <li>Tune this site to my likings</li>
-        <li>Add new styles</li>
-        <li>Add a Lua tutorial page</li>
-        <li>Make an interactive map of Aethepor</li>
-        <li>Add more sites in the Sites page</li>
+            <li>Tune this site to my likings</li>
+            <li>Add new styles</li>
+            <li>Add a Lua tutorial page</li>
+            <li>Make an interactive map of Aethepor</li>
+            <li>Add more sites in the Sites page</li>
+            <li>Explain how I made my 11ty site</li>
         </ul>
     </article>
 </aside>

@@ -13,5 +13,8 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.2.0"
   }
 }

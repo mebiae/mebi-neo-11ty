@@ -33,8 +33,8 @@ layout: layout/base.njk
         {{ content | safe }}
 
         <div class="blognav">
-            {% if prevPost %}<a href="{{ prevPost.url }}">&lt;-- Previous Post</a>{% endif %}
-            {% if nextPost %}<a href="{{ nextPost.url }}">Next Post --&gt;</a>{% endif %}
+            {% if prevPost %}<a href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>{% endif %}
+            {% if nextPost %}<a href="{{ nextPost.filePathStem }}">Next Post --&gt;</a>{% endif %}
         </div>
     </article>
 </main>

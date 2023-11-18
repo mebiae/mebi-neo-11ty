@@ -65,13 +65,13 @@ nav {
 
 a,
 a:visited {
-    color: var(--a-link);
+    color: #aed4ff;
     text-decoration: none;
 }
 
 a:active,
 a:hover {
-    color: var(--a-hover)
+    color: #8181ff
 }
 
 main {
@@ -85,4 +85,31 @@ section {
     background-color: #0d0d1a;
     padding: 15px;
     margin-bottom: 10px;
+}
+
+nav {
+    border: 2px solid #07071f;
+    background-color: #0d0d1a;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 1em;
+}
+
+nav a {
+    font-family: DOS;
+    font-size: 1.17em;
+    text-align: center;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #07071f;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #0d0d1a;
+    background-color: #8181ff;
+    transition: 0.1s;
 }

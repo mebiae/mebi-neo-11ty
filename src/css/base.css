@@ -161,6 +161,7 @@ footer {
     gap: 5px;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
 }
 
 nav {

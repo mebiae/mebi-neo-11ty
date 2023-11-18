@@ -7,7 +7,16 @@ metatitle:
 
 layout: layout/base.njk
 ---
-
+<style>
+    #snip {
+        resize: none;
+        color: var(--a-link);
+        border: 2px solid var(--box-border);
+        background-color: var(--box-back);
+        font-family: NEC;
+        height: 80px;
+    }
+</style>
 <main>
     <article>
         <h1>Welcome to Mebi County!</h1>
@@ -27,9 +36,26 @@ layout: layout/base.njk
             {{ log.content | safe }}
             {% endfor %}
         </div>
-        
         <h3><a href="/changelog">Full changelog --&gt;</a></h3>
+        <small><a href="/log_feed.xml">Changelog RSS</a></small>
     </article>
+
+    <marquee onmouseover="this.stop()" onmouseout="this.start()">
+        <img src="https://i.imgur.com/o3gt1eA.gif">
+        <img src="/images/buttons/made_with_windows.gif">
+        <img src="/images/buttons/html_learn_it_today.gif">
+        <img src="/images/buttons/internet_now02.gif">
+        <img src="/images/buttons/hosted_on_neocities.gif">
+        <img src="/images/buttons/got_html.gif">
+        <img src="/images/buttons/tumblr.jpg">
+        <img src="/images/buttons/www_1991.png">
+        <img src="/images/buttons/can_iam.gif">
+        <img src="/images/buttons/dos.png">
+        <img src="/images/buttons/nojs_nowork.gif">
+        <img src="/images/buttons/now20.gif">
+        <img src="/images/buttons/nvidia.gif">
+        <img src="/images/buttons/office97.gif">
+    </marquee>
 
     <article>
         <h1>Recent Blogs</h1>
@@ -41,19 +67,15 @@ layout: layout/base.njk
                 <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
             </div>
         {% endfor %}
-
         <h3><a href="/blog">See more --&gt;</a></h3>
+        <small><a href="/blog_feed.xml">Blog RSS</a></small>
     </article>
 </main>
 
 <aside>
     {% include "./_includes/partials/sidenav.njk" %}
     <article>
-        <h1>The Misc Box</h1>
-
         {% include "./_includes/partials/styleswitcher.njk" %}
-        
-        <p>I never knew this</p>
     </article>
     <article>
         <h1>To-do list</h1>
@@ -65,5 +87,14 @@ layout: layout/base.njk
             <li>Add more sites in the Sites page</li>
             <li>Explain how I made my 11ty site</li>
         </ul>
+    </article>
+    <article style="text-align: center;">
+        <img src="/images/buttons/mebi_county.gif" alt="Site button">
+        <textarea readonly id="snip">
+            <a href="https://afellowu.neocities.org/" target="_blank">
+                <img src="https://afellowu.neocities.org/images/buttons/mebi_county.gif" alt="Mebi County">
+            </a>
+        </textarea>
+        <small>Hotlink if you wish to.</small>
     </article>
 </aside>

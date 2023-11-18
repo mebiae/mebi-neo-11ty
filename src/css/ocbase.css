@@ -1,0 +1,88 @@
+/*Font loading*/
+
+@font-face {
+    font-family: POMono;
+    src: url(../fonts/PixelOperatorMono.ttf);
+}
+
+@font-face {
+    font-family: NEC;
+    src: url(../fonts/Web437_NEC_APC3_8x16.woff) format("woff");
+}
+
+@font-face {
+    font-family: DOS;
+    src: url(../fonts/Web437_DOS-V_TWN16.woff) format("woff");
+}
+
+@font-face {
+    font-family: SPR;
+    src: url(../fonts/Web437_SperryPC_8x16.woff) format("woff");
+}
+
+/*HTML related*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {  
+    color: #fff;
+    font-family: NEC;
+    background-color: #030312;
+}
+
+p {
+    line-height: 1.2em;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+    font-family: DOS;
+}
+
+main h1 {
+    font-size: 2em;
+}
+
+section,
+article,
+footer,
+nav {
+    border-radius: 12px;
+}
+
+#flex {
+    display: flex;
+}
+
+#page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+a,
+a:visited {
+    color: var(--a-link);
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    color: var(--a-hover)
+}
+
+main {
+    flex: 1;
+    order: 1;
+}
+
+article,
+section {
+    border: 2px solid #07071f;
+    background-color: #0d0d1a;
+    padding: 15px;
+    margin-bottom: 10px;
+}

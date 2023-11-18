@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const bundlerPlugin = require("@11ty/eleventy-plugin-bundle");
 
 module.exports = function (eleventyConfig) {
   
@@ -14,6 +15,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(bundlerPlugin);
 
     return {
     passthroughFileCopy: true,

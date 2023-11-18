@@ -1,5 +1,6 @@
 {
     "layout": "layout/blog",
     "tags": "blogs",
-    "permalink": "{{ page.filePathStem }}.html"
+    "permalink": "{{ page.filePathStem }}.html",
+    "date": "git Last Modified"
 }

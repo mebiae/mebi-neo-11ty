@@ -29,12 +29,16 @@ layout: layout/base.njk
 
     <article class="update">
         <h1>Changelog</h1>
-
+        <h3>Site last updated: <span id="lastupdate"><script type="text/javascript" src="/js/updates-visitors.js"></script></span></h3>
         <div id="update">
-            {% for log in collections.changelog | reverse | limit(5) %}
-            <h2>{{ log.date.toLocaleDateString("en-CA") }}</h2>
-            {{ log.content | safe }}
-            {% endfor %}
+            {% if collections.changelog %}
+                {% for log in collections.changelog | reverse | limit(5) %}
+                <h2>{{ log.date.toLocaleDateString("en-CA") }}</h2>
+                {{ log.content | safe }}
+                {% endfor %}
+            {% else %}
+                <h3>No updates to display.</h3>
+            {% endif %}
         </div>
         <h3><a href="/changelog">Full changelog --&gt;</a></h3>
         <small><a href="/log_feed.xml">Changelog RSS</a></small>
@@ -59,14 +63,18 @@ layout: layout/base.njk
 
     <article>
         <h1>Recent Blogs</h1>
+        {% if collections.blogs %}
+            {% for post in collections.blogs | reverse | limit(3) %}
+                <div class="blogposts">  
+                    <h2><a href="{{ post.filePathStem }}">{{ post.data.sub }}</a></h2>
+                    <p>{{ post.data.blogdesc }}</p>
+                    <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h3>Hm, no blog posts, for now.</h3>
+        {% endif %}
 
-        {% for post in collections.blogs | reverse | limit(3) %}
-            <div class="blogposts">  
-                <h2><a href="{{ post.filePathStem }}">{{ post.data.sub }}</a></h2>
-                <p>{{ post.data.blogdesc }}</p>
-                <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
-            </div>
-        {% endfor %}
         <h3><a href="/blog">See more --&gt;</a></h3>
         <small><a href="/blog_feed.xml">Blog RSS</a></small>
     </article>
@@ -76,6 +84,7 @@ layout: layout/base.njk
     {% include "./_includes/partials/sidenav.njk" %}
     <article>
         {% include "./_includes/partials/styleswitcher.njk" %}
+        <p style="text-align: center;"> You are visitor #<span id="hitcount"><script type="text/javascript" src="/js/updates-visitors.js"></script></span></p>
     </article>
     <article>
         <h1>To-do list</h1>

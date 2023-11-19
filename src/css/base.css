@@ -157,6 +157,7 @@ footer {
     border: 2px solid var(--box-border);
     background-color: var(--box-back);
     padding: 5px;
+    flex-wrap: wrap;
     display: flex;
     gap: 5px;
     justify-content: space-evenly;
@@ -185,11 +186,47 @@ nav a {
     transition: 0.2s;
 }
 
-nav a:hover {
+nav button.drop {
+    color: var(--a-link);
+    font-family: DOS;
+    font-size: 1.17em;
+    text-align: center;
+    width: 150px;
+    border-radius: 5px;
+    background-color: var(--box-border);
+    transition: 0.2s;
+    border: none;
+}
+
+nav a:hover,
+button.drop:hover {
     color: var(--box-back);
     background-color: var(--a-hover);
     transition: 0.1s;
+    cursor: pointer;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--a-link);
+    padding: 12px;
+    font-size: medium;
+    text-decoration: none;
+    display: block;
+}
+
+.show {display:block;}
 
 #update {
     overflow: auto;
@@ -233,7 +270,8 @@ nav a:hover {
         flex-wrap: wrap;
     }
 
-    nav a {
+    nav > a,
+    nav div.dropdown {
         margin-bottom: 8px;
     }
 

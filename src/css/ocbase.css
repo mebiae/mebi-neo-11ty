@@ -113,3 +113,15 @@ nav a:hover {
     background-color: #8181ff;
     transition: 0.1s;
 }
+
+footer {
+    border: 2px solid #07071f;
+    background-color: #0d0d1a;
+    padding: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}

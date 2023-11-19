@@ -1,0 +1,71 @@
+---
+title: 
+sub: Gallery
+
+desc:
+metatitle:
+
+layout: layout/base.njk
+---
+
+<link rel="stylesheet" href="/css/photoviewer.css">
+
+<style>
+    /***
+EZ Gallery by netfriend - https://netfriend.neocities.org/ez-gallery/
+Released under the Unlicense - https://unlicense.org/
+***/
+
+.ezgallery.horizontal { 
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    gap: 5px;
+}
+
+.ezgallery.horizontal a {
+    text-align: center;
+}
+
+.ezgallery.horizontal img {
+    border: 2px solid var(--box-border);
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 5px 5px 0;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.ezgallery.horizontal img:hover {
+    position: relative;
+    top: -5px;
+}
+</style>
+
+<main>
+    <article style="text-align: center;">
+        <h1 style="text-align: left;">Gallery</h1>
+        <h3>Note! This gallery requires JavaScript in order to view the images!</h3>
+        <img src="/images/buttons/nojs_nowork.gif" alt="No JavaScript? No Work!">
+        <p>Here be my artworks! Currently, all that you see here are made in 2023. I might include some older art later.</p>
+        <div class="ezgallery horizontal">
+            <a href="https://file.garden/ZSrdnyDRyR84aPOn/artworks_host/park.png"><img src="/images/gallery/park.webp" alt="Mack Carterson National Park"></a>
+            <a href="https://file.garden/ZSrdnyDRyR84aPOn/artworks_host/orion.png"><img src="/images/gallery/orion.webp" alt="Orion City (Neon) Blues"></a>
+            <a href="https://file.garden/ZSrdnyDRyR84aPOn/artworks_host/uber.png"><img src="/images/gallery/uber.webp" alt="I AM BULLETPROOF!"></a>
+            <a href="https://file.garden/ZSrdnyDRyR84aPOn/artworks_host/21night.png"><img src="/images/gallery/21night.webp" alt="21st Night of September"></a>
+            <a href="https://file.garden/ZSrdnyDRyR84aPOn/artworks_host/autumn.png"><img src="/images/gallery/autumn.webp" alt="Autumn at Oaks"></a>
+        </div>
+    </article>
+</main>
+
+<aside>
+    {% include "../_includes/partials/sidenav.njk" %}
+    <article>
+        {% include "../_includes/partials/styleswitcher.njk" %}
+    </article>
+</aside>
+
+<script src="https://unpkg.com/photoviewer@3.6.2/dist/photoviewer.min.js"></script>
+<script src="/js/gallery.js"></script>

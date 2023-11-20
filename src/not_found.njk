@@ -26,17 +26,14 @@ layout: layout/base.njk
     }
 
     #container {
+        flex-wrap: wrap;
         display:flex;
         justify-content: center;
-        gap: 6em;
+        column-gap: 6em;
+        row-gap: 1em;
     }
 
     @media (max-width:800px) {
-        #container {
-            flex-direction: column;
-            gap: 1em;
-        }
-
         nav {
             display: none; /*is this evil?*/
         }

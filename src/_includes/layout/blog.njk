@@ -30,6 +30,7 @@ layout: layout/base.njk
         <h1>{{ sub }}</h1>
         <blockquote>{{ blogdesc }}</blockquote>
         <small>Posted on {{ page.date.toLocaleDateString("en-CA") }}</small>
+        <hr>
         {{ content | safe }}
 
         <div class="blognav">

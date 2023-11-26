@@ -127,8 +127,8 @@ aside > article.sidebar > ul a li {
     font-weight: normal;
 }
 
-aside > article.sidebar > a li,
-aside > article.sidebar > ul {
+aside > article.sidebar a li,
+aside > article.sidebar ul {
     list-style: "✩ ";
     line-height: 2em;
 }
@@ -143,6 +143,10 @@ aside > article.sidebar > ul li:hover  {
 aside > article.sidebar > ul {
     margin-block-start: 0;
     margin-block-end: 0;
+}
+
+#side {
+    padding-left: 1.5em;
 }
 
 article,
@@ -165,6 +169,7 @@ footer {
     text-align: center;
 }
 
+/* Old nav code
 nav {
     border: 2px solid var(--box-border);
     background-color: var(--box-back);
@@ -227,6 +232,7 @@ button.drop:hover {
 }
 
 .show {display:block;}
+*/
 
 #update {
     overflow: auto;

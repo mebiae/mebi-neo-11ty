@@ -20,6 +20,22 @@
     src: url(../fonts/Web437_SperryPC_8x16.woff) format("woff");
 }
 
+/*Scrollbar*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-background);
+    border-radius: 50px;
+    border: 2px solid var(--scroll-border);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scroll-border);
+}
+
 /*HTML related*/
 
 * {
@@ -77,6 +93,12 @@ a:hover {
 main {
     flex: 1;
     order: 1;
+}
+
+aside {
+    order: 2;
+    width: 250px;
+    margin-left: 10px;
 }
 
 article,

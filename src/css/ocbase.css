@@ -40,6 +40,7 @@
 
 * {
     box-sizing: border-box;
+    scrollbar-color: var(--scroll-background) var(--scroll-border);
 }
 
 body {  
@@ -79,6 +80,11 @@ nav {
     margin: 0 auto;
 }
 
+div#page > aside {
+    position: sticky;
+    top: 0;
+}
+
 a,
 a:visited {
     color: var(--a-link);
@@ -114,7 +120,7 @@ nav {
     background-color: var(--box-back);
     padding: 15px;
     margin-bottom: 10px;
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     align-items: center;
     column-gap: 1em;
@@ -146,4 +152,10 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+}
+
+@media (max-width:800px) {
+    nav {
+        display: flex;
+    }
 }

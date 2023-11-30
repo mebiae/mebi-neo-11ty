@@ -20,6 +20,10 @@ layout: layout/base.njk
         background-color: #141a3e;
         padding: 1em;
     }
+
+    .head-box {
+        border-bottom: 2px solid var(--box-border);
+    }
 </style>
 
 {% set prevPost = collections.blogs | getPreviousCollectionItem %}
@@ -27,10 +31,11 @@ layout: layout/base.njk
 
 <main>
     <article>
-        <h1>{{ sub }}</h1>
-        <blockquote>{{ blogdesc }}</blockquote>
-        <small>Posted on {{ page.date.toLocaleDateString("en-CA") }}</small>
-        <hr>
+        <div class="head-box">
+            <h1>{{ sub }}</h1>
+            <blockquote>{{ blogdesc }}</blockquote>
+            <p><b>Posted on:</b> {{ page.date.toLocaleDateString("en-CA") }}</p>
+        </div>
         {{ content | safe }}
 
         <div class="blognav">

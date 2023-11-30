@@ -36,7 +36,7 @@
     --radius: 8px;
 }*/
 
-/*Scrollbar*/
+/*Scrollbar (for webkit browsers)*/
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -56,6 +56,7 @@
 
 * {
     box-sizing: border-box;
+    scrollbar-color: var(--background) var(--box-border);
 }
 
 body {  
@@ -70,7 +71,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+b {
     font-weight: normal;
     font-family: DOS;
 }
@@ -169,23 +171,28 @@ footer {
     text-align: center;
 }
 
-/* Old nav code
+div#page > nav {
+    position: sticky;
+    top: 0;
+}
+
 nav {
     border: 2px solid var(--box-border);
     background-color: var(--box-back);
     padding: 15px;
     margin-bottom: 10px;
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     align-items: center;
-    column-gap: 1em;
+    column-gap: 0.2em;
+    row-gap: 0.2em;
 }
 
 nav a {
     font-family: DOS;
     font-size: 1.17em;
     text-align: center;
-    width: 150px;
+    width: 100px;
     border-radius: 5px;
     background-color: var(--box-border);
     transition: 0.2s;
@@ -196,11 +203,12 @@ nav button.drop {
     font-family: DOS;
     font-size: 1.17em;
     text-align: center;
-    width: 150px;
+    width: 110px;
     border-radius: 5px;
     background-color: var(--box-border);
     transition: 0.2s;
     border: none;
+    height: 22.8px;
 }
 
 nav a:hover,
@@ -232,7 +240,6 @@ button.drop:hover {
 }
 
 .show {display:block;}
-*/
 
 #update {
     overflow: auto;
@@ -264,21 +271,14 @@ button.drop:hover {
     color: var(--a-link);
 }
 
-@media (min-width:800px) {
-    nav {
-        display: none;
-    }
-}
-
 @media (max-width:800px) {
     #flex,
     nav {
         flex-wrap: wrap;
     }
 
-    nav > a,
-    nav div.dropdown {
-        margin-bottom: 8px;
+    nav {
+        display: flex;
     }
 
     aside {

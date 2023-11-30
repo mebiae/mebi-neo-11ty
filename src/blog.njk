@@ -8,18 +8,42 @@ metatitle:
 layout: layout/base.njk
 ---
 
+<style>
+    section > a > article {
+        border: 2px solid #123824;
+        background-color: #13172e;
+    }
+
+    section > a,
+    section > a:visited {
+        color: var(--text);
+    }
+
+    section > a > article:hover,
+    section > a > article:active {
+        box-shadow: 0 0 15px var(--a-hover);
+    }
+
+    section > a:hover {
+        position: relative;
+        top: -3px;
+    }
+</style>
+
 <main>
-    <section>
+    <article>
         <h1>Blogs</h1>
         <p>Here is the place where I just talk about stuff. From my life, to stuff, to whatever.</p>
-    </section>
+    </article>
     <section>
         {% for post in collections.blogs | reverse %}
-            <div class="blogposts">  
-                <h2><a href="{{ post.filePathStem }}">{{ post.data.sub }}</a></h2>
-                <p>{{ post.data.blogdesc }}</p>
-              <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
-           </div>
+            <a href="{{ post.filePathStem }}">
+                <article>  
+                    <h2>{{ post.data.sub }}</h2>
+                    <p>{{ post.data.blogdesc }}</p>
+                <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
+                </article>
+            </a>
         {% endfor %}
     </section>
 </main>

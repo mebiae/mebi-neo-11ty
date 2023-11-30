@@ -16,6 +16,26 @@ layout: layout/base.njk
         font-family: NEC;
         height: 80px;
     }
+
+    section > a > article {
+        border: 2px solid #123824;
+        background-color: #13172e;
+    }
+
+    section > a,
+    section > a:visited {
+        color: var(--text);
+    }
+
+    section > a > article:hover,
+    section > a > article:active {
+        box-shadow: 0 0 15px var(--a-hover);
+    }
+
+    section > a:hover {
+        position: relative;
+        top: -3px;
+    }
 </style>
 <main>
     <article>
@@ -61,15 +81,17 @@ layout: layout/base.njk
         <img src="/images/buttons/office97.gif">
     </marquee>
 
-    <article>
+    <section>
         <h1>Recent Blogs</h1>
         {% if collections.blogs %}
             {% for post in collections.blogs | reverse | limit(3) %}
-                <div class="blogposts">  
-                    <h2><a href="{{ post.filePathStem }}">{{ post.data.sub }}</a></h2>
-                    <p>{{ post.data.blogdesc }}</p>
+                <a href="{{ post.filePathStem }}">
+                    <article>  
+                        <h2>{{ post.data.sub }}</h2>
+                        <p>{{ post.data.blogdesc }}</p>
                     <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
-                </div>
+                    </article>
+                </a>
             {% endfor %}
         {% else %}
             <h3>Hm, no blog posts, for now.</h3>
@@ -77,14 +99,14 @@ layout: layout/base.njk
 
         <h3><a href="/blog">See more --&gt;</a></h3>
         <small><a href="/blog_feed.xml">Blog RSS</a></small>
-    </article>
+    </section>
 </main>
 
 <aside>
     {% include "./_includes/partials/sidenav.njk" %}
     <article>
         {% include "./_includes/partials/styleswitcher.njk" %}
-        <p style="text-align: center;"> You are visitor #<span id="hitcount"><script type="text/javascript" src="/js/updates-visitors.js"></script></span></p>
+        <p style="text-align: center;"><b>You are visitor:</b> #<span id="hitcount"><script type="text/javascript" src="/js/updates-visitors.js"></script></span></p>
     </article>
     <article>
         <h1>To-do list</h1>

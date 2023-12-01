@@ -12,10 +12,14 @@ layout: layout/base.njk
     <article>
         <h1>Changelog</h1>
         <div id="update" style="max-height: 1000px;">
-            {% for log in collections.changelog | reverse | limit(5) %}
+            {% if collections.changelog %}
+                {% for log in collections.changelog | reverse %}
                 <h2>{{ log.date.toLocaleDateString("en-CA") }}</h2>
                 {{ log.content | safe }}
-            {% endfor %}
+                {% endfor %}
+            {% else %}
+                <h3>No updates to display.</h3>
+            {% endif %}
         </div>
     </article>
 

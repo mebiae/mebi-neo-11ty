@@ -36,15 +36,19 @@ layout: layout/base.njk
         <p>Here is the place where I just talk about stuff. From my life, to stuff, to whatever.</p>
     </article>
     <section>
-        {% for post in collections.blogs | reverse %}
-            <a href="{{ post.filePathStem }}">
-                <article>  
-                    <h2>{{ post.data.sub }}</h2>
-                    <p>{{ post.data.blogdesc }}</p>
-                <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
-                </article>
-            </a>
-        {% endfor %}
+        {% if collections.blogs %}
+            {% for post in collections.blogs | reverse %}
+                <a href="{{ post.filePathStem }}">
+                    <article>  
+                        <h2>{{ post.data.sub }}</h2>
+                        <p>{{ post.data.blogdesc }}</p>
+                    <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
+                    </article>
+                </a>
+            {% endfor %}
+        {% else %}
+            <h3>Hm, no blog posts, for now.</h3>
+        {% endif %}
     </section>
 </main>
 

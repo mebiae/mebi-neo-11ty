@@ -115,12 +115,17 @@ section {
     margin-bottom: 10px;
 }
 
+div#page > nav {
+    position: sticky;
+    top: 0;
+}
+
 nav {
     border: 2px solid var(--box-border);
     background-color: var(--box-back);
     padding: 15px;
     margin-bottom: 10px;
-    display: none;
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     column-gap: 1em;
@@ -152,10 +157,4 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-}
-
-@media (max-width:800px) {
-    nav {
-        display: flex;
-    }
 }

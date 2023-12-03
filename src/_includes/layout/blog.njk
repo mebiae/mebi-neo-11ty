@@ -28,6 +28,39 @@ layout: layout/base.njk
     .head-box {
         border-bottom: 2px solid var(--box-border);
     }
+
+    li {
+        margin: 1em 0;
+    }
+
+    hr {
+        margin: 2em 0;
+    }
+
+    pre,code {
+        border-radius: 5px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 90%;
+    }
+
+    code {
+        padding: .1em .3em;
+        border: 1px solid var(--a-hover);
+        color: #fff;
+    }
+
+    pre code {
+        background-color: #1a1a1a;
+        padding: 1em;
+        display: inline-block;
+        font-size: 102%;
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+
+    h3 {
+        margin-top: 2em;
+    }
 </style>
 
 {% set prevPost = collections.blogs | getPreviousCollectionItem %}

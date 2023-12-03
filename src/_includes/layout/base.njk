@@ -38,9 +38,11 @@
     </head>
     <body>
         <div id="page">
-            <div style="display: flex;justify-content: center;">
-                <img id="banner" style="image-rendering: pixelated;max-width: 100%;" src="/images/themes/banner_sign.png" alt="Website Banner">
-            </div>
+            <a href="/">
+                <div style="display: flex;justify-content: center;">
+                    <img id="banner" style="image-rendering: pixelated;max-width: 100%;" src="/images/themes/banner_sign.png" alt="Website Banner">
+                </div>
+            </a>
             {% include "../partials/navbar.njk" %}
             <div id="flex">
                 {{ content | safe }}

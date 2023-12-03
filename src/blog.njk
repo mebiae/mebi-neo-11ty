@@ -42,7 +42,7 @@ layout: layout/base.njk
                     <article>  
                         <h2>{{ post.data.sub }}</h2>
                         <p>{{ post.data.blogdesc }}</p>
-                    <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
+                    <small>Posted on {{ post.date | UTCA }}</small>
                     </article>
                 </a>
             {% endfor %}

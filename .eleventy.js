@@ -14,6 +14,12 @@ module.exports = function (eleventyConfig) {
       return array.slice(0, limit);
     });
 
+    eleventyConfig.addFilter("UTCA", function(val) {
+      return new Date(val).toLocaleDateString("en-CA", {
+        timeZone: "UTC"
+      });
+    });
+
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(bundlerPlugin);
 

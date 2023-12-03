@@ -14,7 +14,7 @@ layout: layout/base.njk
         <div id="update" style="max-height: 1000px;">
             {% if collections.changelog %}
                 {% for log in collections.changelog | reverse %}
-                <h2>{{ log.date.toLocaleDateString("en-CA") }}</h2>
+                <h2>{{ log.date | UTCA }}</h2>
                 {{ log.content | safe }}
                 {% endfor %}
             {% else %}

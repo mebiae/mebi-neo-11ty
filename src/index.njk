@@ -53,7 +53,7 @@ layout: layout/base.njk
         <div id="update">
             {% if collections.changelog %}
                 {% for log in collections.changelog | reverse | limit(5) %}
-                <h2>{{ log.date.toLocaleDateString("en-CA") }}</h2>
+                <h2>{{ log.date | UTCA }}</h2>
                 {{ log.content | safe }}
                 {% endfor %}
             {% else %}
@@ -89,7 +89,7 @@ layout: layout/base.njk
                     <article>  
                         <h2>{{ post.data.sub }}</h2>
                         <p>{{ post.data.blogdesc }}</p>
-                    <small>Posted on {{post.date.toLocaleDateString("en-CA")}}</small>
+                    <small>Posted on {{ post.date | UTCA }}</small>
                     </article>
                 </a>
             {% endfor %}

@@ -1,0 +1,1 @@
+- Added a [status.cafe](https://status.cafe) widget!

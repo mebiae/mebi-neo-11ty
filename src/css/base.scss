@@ -1,0 +1,234 @@
+/*Font loading*/
+
+@font-face {
+    font-family: NEC;
+    src: url(../fonts/Web437_NEC_APC3_8x16.woff) format("woff");
+}
+
+@font-face {
+    font-family: DOS;
+    src: url(../fonts/Web437_DOS-V_TWN16.woff) format("woff");
+}
+
+/*Scrollbar (for webkit browsers)*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--background);
+    border-radius: 50px;
+    border: 2px solid var(--box-border);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--box-border);
+}
+
+/*Partials*/
+
+%base {
+    border: 2px solid var(--box-border);
+    background-color: var(--box-back);
+}
+
+/*HTML related*/
+
+* {
+    box-sizing: border-box;
+    scrollbar-color: var(--background) var(--box-border);
+}
+
+body {  
+    color: var(--text);
+    font-family: NEC;
+    background-color: var(--background);
+}
+
+p {line-height: 1.3em;}
+
+h1,
+h2,
+h3,
+b,
+strong {
+    font-weight: normal;
+    font-family: DOS;
+}
+
+section,
+article,
+footer,
+nav {
+    border-radius: var(--radius);
+}
+
+#flex {display: flex;}
+
+#page {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    nav {
+        position: sticky;
+        top: 0;
+    }
+}
+
+a,
+a:visited {
+    color: var(--a-link);
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    color: var(--a-hover)
+}
+
+main {
+    flex: 1;
+    order: 1;
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+aside {
+    order: 2;
+    width: 250px;
+    margin-left: 10px;
+
+    .sidebar {
+        ul a li {
+            color: var(--text);
+            font-weight: normal;
+            list-style: "✩ ";
+            line-height: 2em;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        a:hover,
+        li:hover {
+            color: var(--a-hover);
+            position: relative;
+            top: -2px;
+        }
+    }
+}
+
+#side {padding-left: 1.5em;}
+
+hr {border: 1px solid var(--box-border);}
+
+article,
+section {
+    @extend %base;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+nav {
+    @extend %base;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 0.2em;
+    row-gap: 0.2em;
+    
+    a {
+        font-family: DOS;
+        font-size: 1.17em;
+        text-align: center;
+        width: 100px;
+        border-radius: 5px;
+        background-color: var(--box-border);
+        transition: 0.2s;
+
+        &:hover {
+            color: var(--box-back);
+            background-color: var(--a-hover);
+            transition: 0.1s;
+        }
+    }
+}
+
+footer {
+    @extend %base;
+    padding: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+#update {
+    overflow: auto;
+    max-width: auto;
+    max-height: 200px;
+    border: 2px solid var(--box-border);
+    padding: 0 15px;
+
+    h2 {
+        padding: 5px;
+        max-width: 100%;
+        background-color: var(--box-border);
+    }
+}
+
+#stylestyle {
+    form {
+        background-color: var(--box-back);
+        padding: 5px;
+        text-align: center;
+    }
+
+    select {
+        background-color: var(--box-back);
+        padding: 5px;
+        font-family: NEC;
+        width: 100%;
+        margin: 5px auto;
+        border: 2px solid var(--box-border);
+        color: var(--a-link);
+    }
+}
+
+#statuscafe {
+    padding: .5em;
+    border: 2px solid var(--box-border);
+    border-radius: var(--radius);
+
+    &-username {
+        margin-bottom: .5em
+    }
+
+    &-content {
+        margin: 0 1em 0.5em 1em;
+    }
+}
+
+@media (max-width:800px) {
+    #flex,
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    aside {
+        width: 100%;
+        margin-left: 0;
+
+        .sidebar {display: none;}
+    }
+}

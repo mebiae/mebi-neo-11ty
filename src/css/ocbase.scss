@@ -14,16 +14,16 @@
 
 ::-webkit-scrollbar {
     width: 12px;
-}
 
-::-webkit-scrollbar-thumb {
-    background-color: var(--background);
-    border-radius: 50px;
-    border: 2px solid var(--box-border);
-}
+    &-thumb {
+        background-color: var(--scroll-background);
+        border-radius: 50px;
+        border: 2px solid var(--scroll-border);
+    }
 
-::-webkit-scrollbar-track {
-    background: var(--box-border);
+    &-track {
+        background: var(--scroll-border);
+    }
 }
 
 /*Partials*/

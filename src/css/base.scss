@@ -14,16 +14,16 @@
 
 ::-webkit-scrollbar {
     width: 12px;
-}
 
-::-webkit-scrollbar-thumb {
-    background-color: var(--background);
-    border-radius: 50px;
-    border: 2px solid var(--box-border);
-}
+    &-thumb {
+        background-color: var(--background);
+        border-radius: 50px;
+        border: 2px solid var(--box-border);
+    }
 
-::-webkit-scrollbar-track {
-    background: var(--box-border);
+    &-track {
+        background: var(--box-border);
+    }
 }
 
 /*Partials*/
@@ -102,11 +102,16 @@ aside {
     margin-left: 10px;
 
     .sidebar {
-        ul a li {
+        li {
             color: var(--text);
             font-weight: normal;
             list-style: "✩ ";
             line-height: 2em;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        ul {
             margin-top: 0;
             margin-bottom: 0;
         }

@@ -8,4 +8,6 @@ Feel free to use the code here as a reference. Do note that not all code here is
 
 For the original non-11ty site, visit [here](https://github.com/AFellowCoderUser/mebi-neocities).
 
-You may have noticed there is a separate repo named "mebi-neo-11ty-pract", well I forgot that repo branches existed :P but whatever
+Found anything wrong with the website? Like accessibility or missing things? You can let me know [here](https://github.com/AFellowCoderUser/mebi-neo-11ty/pulls).
+
+Or if you want, you can [contribute](https://github.com/AFellowCoderUser/mebi-neo-11ty/pulls) to the site.

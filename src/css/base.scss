@@ -16,13 +16,13 @@
     width: 12px;
 
     &-thumb {
-        background-color: var(--background);
+        background-color: var(--scroll-background);
         border-radius: 50px;
-        border: 2px solid var(--box-border);
+        border: 2px solid var(--scroll-border);
     }
 
     &-track {
-        background: var(--box-border);
+        background: var(--scroll-border);
     }
 }
 
@@ -37,13 +37,14 @@
 
 * {
     box-sizing: border-box;
-    scrollbar-color: var(--background) var(--box-border);
+    scrollbar-color: var(--scroll-background) var(--scroll-border);
 }
 
 body {  
     color: var(--text);
     font-family: NEC;
-    background-color: var(--background);
+    background: var(--background);
+    background-attachment: var(--backbool);
 }
 
 p {line-height: 1.3em;}

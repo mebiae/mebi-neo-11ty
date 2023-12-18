@@ -14,8 +14,8 @@
     --scroll-border: var(--box-border);
 
     --radius: 0;
+}
 
-    nav a {
-        background-color: #141a3e;
-    }
+body nav a {
+    background-color: #141a3e;
 }

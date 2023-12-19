@@ -19,10 +19,11 @@ layout: layout/base.njk
         cursor: pointer;
     }
 
-    .resp {
+    .to img {
         max-width: 100%;
         height: auto;
         width: 150px;
+        image-rendering: pixelated;
     }
 
     #container {
@@ -31,12 +32,6 @@ layout: layout/base.njk
         justify-content: center;
         column-gap: 6em;
         row-gap: 1em;
-    }
-
-    @media (max-width:800px) {
-        nav {
-            display: none; /*is this evil?*/
-        }
     }
 </style>
 
@@ -49,21 +44,21 @@ layout: layout/base.njk
             <div class="to">
                 <a href="/">
                     <h3>Return Home</h3>
-                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                    <img src="/images/main/house.png" alt="Return Home">
                 </a>
             </div>
 
             <div class="to hover">
                 <a onclick="history.back()">
                     <h3>Go Back</h3>
-                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                    <img src="/images/main/turnback.png" alt="Go Back">
                 </a>
             </div>
 
             <div class="to">
-                <a href="">
+                <a href="/sitemap">
                     <h3>Use the Sitemap</h3>
-                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                    <img src="/images/main/map.png" alt="Sitemap">
                 </a>
             </div>
         </div>

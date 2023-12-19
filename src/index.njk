@@ -1,6 +1,6 @@
 ---
-title: 
-sub: 
+title:
+sub:
 
 desc:
 metatitle:
@@ -23,7 +23,9 @@ layout: layout/base.njk
     }
 
     section > a,
-    section > a:visited {
+    section > a:visited,
+    section > a:hover,
+    section > a:active {
         color: var(--text);
     }
 
@@ -35,6 +37,10 @@ layout: layout/base.njk
     section > a:hover {
         position: relative;
         top: -3px;
+    }
+
+    section > a article:last-of-type {
+        margin-bottom: 0;
     }
 </style>
 <main>
@@ -86,7 +92,7 @@ layout: layout/base.njk
         {% if collections.blogs %}
             {% for post in collections.blogs | reverse | limit(3) %}
                 <a href="{{ post.filePathStem }}">
-                    <article>  
+                    <article>
                         <h2>{{ post.data.sub }}</h2>
                         <p>{{ post.data.blogdesc }}</p>
                     <small>Posted on {{ post.date | UTCA }}</small>

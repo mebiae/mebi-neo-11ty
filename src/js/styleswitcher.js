@@ -13,6 +13,25 @@ function changeStyle(style) {
     } else {
         banner.src = "/images/themes/banner_sign.png";
     }
+
+    /*if (style == "christmas") {
+        const deco = document.createElement("div");
+        deco.className = "decor";
+        deco.style.cssText = "position:relative;display:flex;justify-content:space-between;bottom:1331px;";
+        document.getElementById("page").appendChild(deco);
+
+        for (let i = 0; i < 4; i++) {
+            const decimg = document.createElement("img");
+            decimg.style.cssText = "flex-basis:5px;";
+            decimg.src = "/images/themes/christmas/snow1.png";
+            deco.appendChild(decimg);
+        }
+    } else {
+        const deco = document.querySelector(".decor");
+        if (deco != null || deco != undefined) {
+            deco.remove();
+        }
+    }*/
 }
 window.onload = changeStyle();
 

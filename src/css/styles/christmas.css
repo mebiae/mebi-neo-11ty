@@ -1,0 +1,21 @@
+:root {
+    --text: #b7f0df;
+    --background: linear-gradient(to bottom, #2f3553, #505675 90%, #bebebe 92%);
+    --bg-image: url();
+    --backbool: scroll;
+
+    --a-link: #00ffb3;
+    --a-hover: #00d9ff;
+    
+    --box-border: #0c4329;
+    --box-back: #141a3e;
+
+    --scroll-background: var(--box-back);
+    --scroll-border: var(--box-border);
+
+    --radius: 12px;
+}
+
+body nav a {
+    background-color: #0c4329;
+}

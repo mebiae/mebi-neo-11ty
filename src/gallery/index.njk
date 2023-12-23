@@ -47,8 +47,17 @@ Released under the Unlicense - https://unlicense.org/
 <main>
     <article style="text-align: center;">
         <h1 style="text-align: left;">Gallery</h1>
-        <h3>Note! This gallery requires JavaScript in order to view the images!</h3>
-        <img src="/images/buttons/nojs_nowork.gif" alt="No JavaScript? No Work!">
+        <!--<h3>Note! This gallery requires JavaScript in order to view the images!</h3>
+        <img src="/images/buttons/nojs_nowork.gif" alt="No JavaScript? No Work!">-->
+        <div class="notif warn">
+            <div><h2>Notice</h2> <span class="close" title="this doesn't work">X</span></div>
+            <span>Please enable JavaScript in order for the gallery to work.</span>
+        </div>
+        <script>
+            //remove warning if javascript is enabled
+            var warn = document.querySelector(".notif.warn");
+            warn.style.display = "none";
+        </script>
         <p>Here be my artworks! Currently, all that you see here are made in 2023. I might include some older art later.</p>
         <div class="ezgallery horizontal">
             <a href="https://file.garden/ZSrdnyDRyR84aPOn/artworks_host/park.png"><img src="/images/thumbnails/gallery/park.webp" alt="Mack Carterson National Park"></a>

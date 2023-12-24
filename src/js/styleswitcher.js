@@ -14,24 +14,43 @@ function changeStyle(style) {
         banner.src = "/images/themes/banner_sign.png";
     }
 
-    /*if (style == "christmas") {
-        const deco = document.createElement("div");
-        deco.className = "decor";
-        deco.style.cssText = "position:relative;display:flex;justify-content:space-between;bottom:1331px;";
-        document.getElementById("page").appendChild(deco);
+    if (style == "christmas") {
+        /*const deco = document.querySelector(".decor");
+        deco.style.cssText = "position:relative;display:flex;justify-content:space-between;";
 
         for (let i = 0; i < 4; i++) {
+            let v = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
             const decimg = document.createElement("img");
-            decimg.style.cssText = "flex-basis:5px;";
-            decimg.src = "/images/themes/christmas/snow1.png";
+            decimg.style.cssText = "position:absolute;";
+            decimg.src = "/images/themes/christmas/snow" + [v] + ".png";
             deco.appendChild(decimg);
+        }*/
+
+        const canvas = document.body.getElementsByTagName("canvas")[0]
+        const snowele = document.querySelector("head > script[src='/js/snow.js']")
+        if (snowele == null || snowele == undefined) {
+            const snow = document.createElement("script");
+            snow.src = "/js/snow.js";
+            document.head.appendChild(snow);
+            console.log("created snow script");
+        } else {
+            console.log("script already exists");
+            if (canvas == null || canvas == undefined) {
+                createcanvas();
+            }
         }
     } else {
-        const deco = document.querySelector(".decor");
+        /*const deco = document.querySelector(".decor");
         if (deco != null || deco != undefined) {
-            deco.remove();
+            while (deco.firstChild) {
+                deco.removeChild(deco.firstChild);
+            }
+        }*/
+        const canvas = document.body.getElementsByTagName("canvas")[0]
+        if (canvas != null || canvas != undefined) {
+            canvas.remove();
         }
-    }*/
+    }
 }
 window.onload = changeStyle();
 

@@ -11,19 +11,19 @@ layout: layout/ocbase.njk
 <style>
     :root {
         --text: #fff;
-        --background: #030312;
+        --background: #0a0a11;
         --bg-image: url();
 
-        --a-link: #aed4ff;
-        --a-hover: #8181ff;
+        --a-link: #98c8ff;
+        --a-hover: #ffc46b;
         
-        --box-border: #07071f;
-        --box-back: #0d0d1a;
+        --box-border: #181833;
+        --box-back: #0e0e1d;
 
         --scroll-background: #222247;
         --scroll-border: var(--box-back);
 
-        --radius: 15px;
+        --radius: 0;
     }
 
     .to:hover {
@@ -45,48 +45,55 @@ layout: layout/ocbase.njk
         display:flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 5em;
+        column-gap: 3em;
+        row-gap: 0.5em;
     }
 </style>
 
-<main>
-    <article style="text-align: center;">
-        <div>
-            <h1>The Mebi Universe Hub</h1>
-            <p>The place where all the universes, galaxies, solar systems, and other stuff created by Mebi are linked together.</p>
-            <p>Also kinda the place where all of my OCs would meet maybe..</p>
-            <p>Well, your journey starts here. Select a portal, and be safe out there, my friend. (only one works for now lol)</p>
-        </div>
-    </article>
-    <article style="text-align: center;">
-        <div id="container">
-            <div class="to">
-                <a href="./aethepor">
-                    <h3>The Aether Islands</h3>
-                    <img class="resp" src="/images/aether_flag.png" alt="Heavy TF2" onmouseover="this.src='/images/aether_flag_hover.png'" onmouseout="this.src='/images/aether_flag.png'">
-                </a>
-            </div>
-
-            <div class="to">
-                <a href="">
-                    <h3>The Far Future</h3>
-                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
-                </a>
-            </div>
-
-            <div class="to">
-                <a href="">
-                    <h3>The Farther Future</h3>
-                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
-                </a>
-            </div>
-
-            <div class="to">
-                <a href="">
-                    <h3>Continent of Moran</h3>
-                    <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
-                </a>
-            </div>
-        </div>
-    </article>
-</main>
+<div id="page">
+    <nav><a href="/">Mebi County</a><a href="/ochub">Main Hub</a><a href="./about">About</a></nav>
+    <div id="flex">
+        <main>
+            <article style="text-align: center;">
+                <div>
+                    <h1>The Mebiverse Hub</h1>
+                    <p>The place where all the universes, galaxies, solar systems, and other stuff created by Mebi are linked together. In other words, welcome to my OC archive!</p>
+                    <p>Also kinda the place where all of my OCs would meet maybe..</p>
+                    <p>Well, your journey starts here. Select a portal, and be safe out there, my friend. (only one works for now lol)</p>
+                </div>
+            </article>
+            <article style="text-align: center;">
+                <div id="container">
+                    <div class="to">
+                        <a href="./aethepor">
+                            <h3>The Aether Islands</h3>
+                            <img class="resp" src="/images/aether_flag.png" alt="Flag of Aethepor" onmouseover="this.src='/images/aether_flag_hover.png'" onmouseout="this.src='/images/aether_flag.png'">
+                        </a>
+                    </div>
+        
+                    <div class="to">
+                        <a href="">
+                            <h3>The Far Future</h3>
+                            <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                        </a>
+                    </div>
+        
+                    <div class="to">
+                        <a href="">
+                            <h3>The Farther Future</h3>
+                            <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                        </a>
+                    </div>
+        
+                    <div class="to">
+                        <a href="">
+                            <h3>Continent of Moran</h3>
+                            <img class="resp" src="/images/theheavy.png" alt="Heavy TF2">
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+    {% include "partials/footer.njk" %}
+</div>

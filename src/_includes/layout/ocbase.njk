@@ -9,9 +9,9 @@
                     - {{sub}}
                 {% endif %}
             {% elif sub %}
-                The Inter-Universal Hub - {{sub}}
+                The Mebiverse Hub - {{sub}}
             {% else %}
-                The Inter-Universal Hub
+                The Mebiverse Hub
             {% endif %}
         </title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -36,12 +36,6 @@
         <link rel="stylesheet" type="text/css" href="/css/ocbase.css" />
     </head>
     <body>
-        <div id="page">
-            <nav><a href="/">Mebi County</a></nav>
-            <div id="flex">
-                {{ content | safe }}
-            </div>
-            {% include "../partials/footer.njk" %}
-        </div>
+        {{ content | safe }}
     </body>
 </html>

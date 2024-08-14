@@ -151,7 +151,7 @@ It's like a bakery; `input` is where the unbaked code is, that are eventually ba
 
 ### Creating a .gitignore file
 
-If you plan not to use GitHub, you can skip this part.
+If you plan not to use GitHub, you can skip this part. Instead, refer [here](https://whiona.weblog.lol/2023/10/my-neocities-workflow:-using-eleventy-and-the-cli-to-speed-up-development#:~:text=a%20single%20command.-,Using%20the%20Neocities%20CLI,-Firstly%2C%20if%20you) on how to use the Neocities CLI.
 
 Since we'll be publishing these files to GitHub, we'll need to exclude some files first. Create a `.gitignore` file in the root file; then add the following code:
 

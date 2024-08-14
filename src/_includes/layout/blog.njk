@@ -15,7 +15,7 @@ layout: layout/base.njk
         gap: 1em;
     }
 
-    .blognav a {
+    .blognav .nav {
         text-align: center;
         background-color: #141a3e;
         padding: 1em;
@@ -68,6 +68,10 @@ layout: layout/base.njk
 
 <main>
     <article>
+		<div class="blognav" style="justify-content: space-between;">
+			{% if prevPost %}<a href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>{% else %}<span style="color: #444444;">X-- End of list</span>{% endif %}
+        	{% if nextPost %}<a href="{{ nextPost.filePathStem }}">Next Post --&gt;</a>{% else %}<span style="color: #444444;">End of list --X</span>{% endif %}
+		</div>
         <div class="head-box">
             <h1>{{ sub }}</h1>
             <p class="indent">{{ blogdesc }}</p>
@@ -76,8 +80,8 @@ layout: layout/base.njk
         {{ content | safe }}
 
         <div class="blognav">
-            {% if prevPost %}<a href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>{% endif %}
-            {% if nextPost %}<a href="{{ nextPost.filePathStem }}">Next Post --&gt;</a>{% endif %}
+            {% if prevPost %}<a class="nav" href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>{% endif %}
+            {% if nextPost %}<a class="nav" href="{{ nextPost.filePathStem }}">Next Post --&gt;</a>{% endif %}
         </div>
     </article>
 </main>

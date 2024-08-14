@@ -33,17 +33,69 @@ layout: layout/base.njk
     }
 
     #info {
-        margin-left: 5rem;
-        margin-right: 5rem;
+        margin: 0 auto;
+        max-width: 400px;
+        display: flex;
+        border-color: #6fffd4;
+        filter: drop-shadow(0 0 3px #6fffd4);
+        background-color: #152c25;
+        border: 2px solid #6fffd4;
+        padding: 15px;
+        border-radius: 12px;
+        flex-wrap: wrap;
+    }
+
+    #info #prof {
+        max-width: 150px;
+        max-height: 150px;
+        border: 2px solid #6fffd4;
+        filter: drop-shadow(0 0 3px #6fffd4);
+        border-radius: 12px;
+        margin-right: 12px;
+        text-align: center;
+    }
+
+    #info #info-info {
+        float: right;
+        flex: 2;
+    }
+
+    #info #sigh {
+        margin: 12px;
+    }
+
+    @media (max-width:305px) {
+        #info #prof {
+            margin: 0 auto 15px;
+        }
     }
 </style>
 
 <main>
     <article>
-
-        <article id="info"></article>
-
         <h1>About me</h1>
+
+        <div id="info">
+            <img id="prof" src="/images/mebiae.png" title="that is me">
+            <div id="info-info">
+                <h2 style="margin: 0; text-align: center;background-color: #0c1a16;border-radius: 10px;">Mebi Aether</h2>
+                <div style="text-align: left; margin-top: 12px">
+                    DOB
+                    <span style="float: right;">Jan 6</span>
+                </div>
+                <div style="text-align: left; margin-top: 12px">
+                    Age
+                    <span style="float: right;">Below 18</span>
+                </div>
+                <div style="text-align: left; margin-top: 12px">
+                    Interests
+                    <span style="float: right;">Games, coding, art</span>
+                </div>
+                <div style="text-align: left; margin-top: 12px">
+                    Smart, yet dumb.
+                </div>
+            </div>
+        </div>
 
         <!--<div id="card">
             <img src="/images/pfp.png" alt="mebi stares at you with an emotion that can't be determined between sad, confused, or neutral">

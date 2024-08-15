@@ -1,7 +1,7 @@
 ---
 sub: You only have one shot, player.
 blogdesc: My experience and opinions on the game OneShot. (Spoilers!!!)
-date: 2024-07-25
+date: 2024-08-16
 ---
 
 <!--hey, if you're viewing this from my github repo, well, enjoy reading an early draft of this one blog post. as you can see... it's been quite a while.-->
@@ -106,4 +106,48 @@ We enter the final region of the game: The Refuge. We traverse some rooms and- o
 
 It appears we're pretty high up. Tower's not far now, we just need to get down from the catwalks. We meet another guardian robot, just telling us about our goal to restore the sun, but to also check the library before we enter the tower. We make our way down the catwalk, to hear the sound of metal clanging around, followed by a "Come ooonnnnnnnnnnnnnn!!" We investigate where the sound is coming from, and it's from a man kicking the elevator door. Well, yet again, we might have to find a solution to whatever we gotta do. We ask the man about the elevator, he says it broke, understandable, there can't be a nice day. The button from the elevator is gone for whatever reason. Alright then, make a new button, but how though?
 
-We looked around a bit to find stuff that we could use; found some fridge magnets, an empty ground coffee can, and scissors.
+Before we ventured to look for materials to make a makeshift button, I come across the same computer that communicates directly to you. What do you have to offer now? Well, no new file, wallpaper is the same, oh, a film. The computer tells me to "Expose the film to the void" and I'll get my answer. Well, I'll figure that out later.
+
+We continued to look around to find stuff that we could use; found some fridge magnets, an empty can of ground coffee, and scissors. Turns out we can use the scissors to cut the can to fit into the slot of the missing "Ground" button. Then tried to make the magnets stick onto the aluminum surface of the can. Well... of course it didn't stick, but Niko managed to keep the weak fridge magnets in place by putting the magnets between the folds that were made when we cut the can. 
+
+That's gotta work? Right?
+
+<img src="/images/blog/you-only-have-one-shot-player/youtried.png" alt="A screenshot from the game. An item is highlighted named &quot;you tried&quot; with the description that reads &quot;It's the thought that counts.&quot;" style="max-width:45%"></img>
+
+Eh... yeah.
+
+This only happens when you combine the ground button and the fridge magnets, then attempting to put the magnitized button(?) into the button slot. The result is the button falling apart. Well... yes, I knew about the tape. A quick taping and... now it works. The elevator powers up, the squares, and... now it needs a password. Off we go again, after telling the man to just stand there. 
+
+Say, you see the "weird film" that we have in our inventory, right? Well, it took some time, but turns out you need to drag the game window past the borders of your screen, like, the place where you can't see your windows. The code is revealed, and we inputted it. Oh, Niko's tired again. We find the bed and Niko sleeps. (Also, yes, I did make Niko ride on the roomba, VROOM VROOM)
+
+### Dream #3
+
+Niko's third dream, he dreams about his mother, giving him pancakes. Well, after Niko's wakes up, he says that he gets pancakes everytime on his birthday. Again, Niko asks me questions. Yep, I have a birthday, I have neighbors, no, they don't share food with me... well, not everytime unlike your neighbors, Niko.
+
+### The Refuge (Ground)
+
+We finally reach the ground level of The Refuge. Time to make our way to the library. There were many spots to explore, the back alleys, the factory (that stupid security thing), vendor lane, a camera room? And of course, the base of the tower. We eventually did find the library, and we need to talk to the head librarian. We meet a robot at a desk, asking them about the head librarian. She's in, but rather busy. The robot attempts to call her.
+
+(insert that one ringing tone)
+
+...
+
+...
+
+...
+
+No response.
+
+We ask if we can meet the head librarian, the robot says we can, and she's upstairs. We make and way and- now we need a library card. The robot attempts to call her.
+
+(insert that one ringing tone)
+
+...
+
+...
+
+...(pain)
+
+No response.
+
+Well, now we need a library card in order to progress, but the head librarian is busy. 

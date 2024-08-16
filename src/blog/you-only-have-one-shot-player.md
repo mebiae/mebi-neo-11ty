@@ -1,18 +1,18 @@
 ---
 sub: You only have one shot, player.
-blogdesc: My experience and opinions on the game OneShot. (Spoilers!!!)
+blogdesc: My experience and opinions on the game OneShot. (More like a described playthrough) (Spoilers!!!)
 date: 2024-08-16
 ---
 
-<!--hey, if you're viewing this from my github repo, well, enjoy reading an early draft of this one blog post. as you can see... it's been quite a while.-->
-
-Uhm, sorry for more inactivity. Hopefully this long break comes to an end and I begin to become more productive.
+Uhm, sorry for more inactivity. Hopefully this long break comes to an end and I begin to become more productive, working on my website that is.
 
 Anyways,
 
 # Potential spoilers ahead! Turn back if you wish not to see it!
 
 ## I strongly recommend that you play the game spoiler free.
+
+<small>also some of the images are sourced from other videos, and eventually from myself, although some are low quality</small>
 
 ***
 
@@ -54,12 +54,14 @@ I then realized where the code is. I quickly opened my folders and went into the
 
 <img src="/images/blog/you-only-have-one-shot-player/document.png" alt="A screenshot of a text file, named &quot;DOCUMENT.oneshot.txt&quot;" style="max-width:100%"></img>
 
-The game had created a new file, upon opening it, most of the text was scrambled around that it couldn't be read, some parts were untouched, and there it was, the code to the vault. We unlocked the vault and inside was a gas mask. Neat! We can venture through the toxic gas! And- uhm. What are those square things? Eh, not gonna worry about those. Oh, forgot that we do have a way out of the Barrens and to the place called the "Glen", which as stated by the operator of the boat (a robot), is the nearest place to The Tower. However, that robot, or rowbot, cannot move due to the heavy rusting over their body. Alright, so we gotta clean the rowbot somehow, well lets just venture through the gaseous areas and see what can we find.
+The game had created a new file, upon opening it, most of the text was scrambled around that it couldn't be read, some parts were untouched, and there it was, the code to the vault. We unlocked the vault and inside was a gas mask. Neat! We can venture through the toxic gas! And- uhm. What are those square things? Eh, not gonna worry about those. Oh, forgot that we do have a way out of the Barrens and to the place called the "Glen", which as stated by the operator of the boat (a robot), is the nearest place to the Tower. However, that robot, or rowbot, cannot move due to the heavy rusting over their body. Alright, so we gotta clean the rowbot somehow, well lets just venture through the gaseous areas and see what can we find.
 
 <!--jesse-->
 I return back having to do some chemistry, now having a bottle of acid, gloves, and a rough sponge. Looks like that'll be good enough to get that rowbot moving again, and it did! And... it cannot determine where the Glen is. The rowbot tells us to contact the "head engineer" in an event of a malfunction. I immediately brought Niko to meet Silver again. She hands us an amber necklace, amber from the Glen. She says that piece of amber should make the rowbot remember where the Glen is. Before we left, Niko asks if there is anything we could do in return of her help, she says we could play chess. 
 
 A quick game of chess, and Niko loses. Being honest, I did expect Niko to lose against Silver. Like, Niko is a child and has only seen others play chess, who went up against a robot who was programmed to be a good chess player.
+
+<img src="/images/blog/you-only-have-one-shot-player/rowbot.png" alt="A cutscene from the game. Niko is crossing over the ocean on a rowbot." style="max-width:45%"></img>
 
 ### The Glen
 
@@ -98,13 +100,24 @@ Anyways, hold on. Is that- oh!
 
 It's them! They'll be here for a short time as I discuss my experience on OneShot. Alright, alright, back on track.
 
+***
+
+## Brief opinions
+
+Looks like we're coming close to the end of the game. The many 4th wall breaking moments is what amazed me. The fact that the game literally communicates you not just through the game window, but a separate window, and that it changes your wallpaper and creates documents relating to puzzles that Niko can't completely solve, but yourself only. I wonder if there are more games like this, that tampers around with your computer. (In a non-malicious way of course).
+<!--KINITOPET! KINITOPET!KINITOPET!KINITOPET!KINITOPET!KINITOPET!-->
+
+***
+
+## Near the end
+
 ### The Refuge
 
 We enter the final region of the game: The Refuge. We traverse some rooms and- oh. The squares have arrived. It blocks one of the doorways that we just passed. Niko runs, as more square continue to form behind. Finally, we reach the final door and get a scenic view of The Refuge. 
 
 <img src="/images/blog/you-only-have-one-shot-player/refuge.png" alt="A view of The Refuge taken from a cutscene. Niko is viewing the scene." style="max-width:45%"></img>
 
-It appears we're pretty high up. Tower's not far now, we just need to get down from the catwalks. We meet another guardian robot, just telling us about our goal to restore the sun, but to also check the library before we enter the tower. We make our way down the catwalk, to hear the sound of metal clanging around, followed by a "Come ooonnnnnnnnnnnnnn!!" We investigate where the sound is coming from, and it's from a man kicking the elevator door. Well, yet again, we might have to find a solution to whatever we gotta do. We ask the man about the elevator, he says it broke, understandable, there can't be a nice day. The button from the elevator is gone for whatever reason. Alright then, make a new button, but how though?
+It appears we're pretty high up. Tower's not far now, we just need to get down from the catwalks. We meet another guardian robot, just telling us about our goal to restore the sun, but to also check the library before we enter the Tower. We make our way down the catwalk, to hear the sound of metal clanging around, followed by a "Come ooonnnnnnnnnnnnnn!!" We investigate where the sound is coming from, and it's from a man kicking the elevator door. Well, yet again, we might have to find a solution to whatever we gotta do. We ask the man about the elevator, he says it broke, understandable, there can't be a nice day. The button from the elevator is gone for whatever reason. Alright then, make a new button, but how though?
 
 Before we ventured to look for materials to make a makeshift button, I come across the same computer that communicates directly to you. What do you have to offer now? Well, no new file, wallpaper is the same, oh, a film. The computer tells me to "Expose the film to the void" and I'll get my answer. Well, I'll figure that out later.
 
@@ -126,7 +139,13 @@ Niko's third dream, he dreams about his mother, giving him pancakes. Well, after
 
 ### The Refuge (Ground)
 
-We finally reach the ground level of The Refuge. Time to make our way to the library. There were many spots to explore, the back alleys, the factory (that stupid security thing), vendor lane, a camera room? And of course, the base of the tower. We eventually did find the library, and we need to talk to the head librarian. We meet a robot at a desk, asking them about the head librarian. She's in, but rather busy. The robot attempts to call her.
+We finally reach the ground level of The Refuge. Time to make our way to the library. There were many spots to explore, the back alleys, the factory (that stupid security thing), vendor lane, a camera room? And of course, the base of the Tower. Speaking about the camera room, we've found some plastic sheets of some sort found in a room in the alleys, (which I guess belongs to the man that we first met at the elevator), and four rectangular slots. Looks like we can insert the sheets there. 
+
+<img src="/images/blog/you-only-have-one-shot-player/cameraroom.png" alt="A screenshot from the game. A view of the camera room." style="max-width:35%;"></img>
+
+But turns out we need to put the lenses in a specific order. Well, with a bit of help I've managed to figure it out. The Tessar design is what helped me. With a pull of the lever, the camera is now ready to snap a photo. A quick snap, and we have a photo of Niko! Well... where are we gonna use this photo? I think we'll figure it out later, like the other stuff.
+
+We eventually did find the library, and we need to talk to the head librarian. We meet a robot at a desk, asking them about the head librarian. She's in, but rather busy. The robot attempts to call her.
 
 (insert that one ringing tone)
 
@@ -150,4 +169,296 @@ We ask if we can meet the head librarian, the robot says we can, and she's upsta
 
 No response.
 
-Well, now we need a library card in order to progress, but the head librarian is busy. 
+Well, now we need a library card in order to progress, but the head librarian is busy. Oh wait, maybe we could ask that lady, Kip, that we met in the factory! So that's what we did.
+
+<img src="/images/blog/you-only-have-one-shot-player/kip.png" alt="A screenshot from the game. A view of Kip's room." style="max-width:45%"></img>
+
+We ask Kip about the library card, she says that we can use her library card instead. Sweet! But, oh! She also remembers about that the library robot we met earlier also has face recognition, soooooooooo we can't get in without having to stick our own face on the- wait! I remember about the glitter glue that we collected and the photo! Niko applies the glitter glue on the library card, and then the photo. Another moment of arts 'n' crafts, we now have... "Niko's" library card! 
+
+<img src="/images/blog/you-only-have-one-shot-player/illegal.png" alt="A view of the inventory. &quot;Kip&quot;'s library card is highlighted." style="max-width:45%"></img>
+
+We return to the library to present "Niko's" library card. The robot scans "Niko's" card, then his face... finally! We can meet the head librarian, George! We cross up the stairs and finally meet her. 
+
+<img src="/images/blog/you-only-have-one-shot-player/randomviewofgeorge.png" alt="A view of George's room." style="max-width:45%"></img>
+
+We meet George, and she has a rather, how should I describe this? Fancy? Show-off? Wait, there also... Rude? Nice? Tired? Sweet? Oh, I see. George has multiple personalities, 1 to 6, and it is random on each playthrough. I've met George #1 on the first playthrough. We wandered around for a bit before asking George about the "strange book" we had in Niko's inventory for quite a while. It's written in an language unknown to us. Oh! Looks like George can help us translate the language. She says it'll take a while, so a quick nap could do.
+
+### The final dream
+
+With our fourth and final dream; Niko has finished his stack of pancakes. But he notices something, something that is a bit off... Niko looks panicked. Why- oh, it's the sun. What's that doing here, why- oh I see. The sun is... shattered. The obly thing that ends the world we're in. Fortunately, this was all a dream... Niko wakes up, I expected him to ask some questions, but no, he just says we need to get going. I'm now a bit concerned.
+
+### The Tower
+
+George has finally finished translating the book. The book appears to have been written to me... Well, what follows is the translated transcript of said book.
+
+***
+
+"Greetings, (Player Name).
+
+If you can finally read
+
+this, that means you
+
+are near the Tower.
+
+--
+
+The Tower is the domain
+
+of an elusive Entity.
+
+This being is connected
+
+to the world.
+
+For now, you can think
+
+of it as the spirit of
+
+the world.
+
+--
+
+It has no physical
+
+form, but it can communicate through
+
+computers and other
+
+machinery.
+
+--
+
+...You know who I am
+
+talking about, of 
+
+course.
+
+--
+
+When you first arrived
+
+here with our savior,
+
+it no doubt contacted
+
+you right away.
+
+--
+
+Through its own means,
+
+the entity will guide
+
+the both of you to the
+
+Tower.
+
+--
+
+The entry room is at 
+
+the Tower's base.
+
+Not only do you need
+
+the sun there, but also
+
+three pieces of the
+
+previous sun.
+
+--
+
+The savior will not be
+
+able to do anything
+
+there.
+
+You, (Player Name), on the other
+
+hand...
+
+--
+
+Look at the pattern on
+
+the floor. Do as it
+
+says.
+
+The window will be
+
+gone, so you need to
+
+bring it back.
+
+***
+
+I... definately need to do something once we enter the Tower. Doing as what the note said, we make our way to the Tower. We enter the Tower and...
+
+...
+
+<img src="/images/blog/you-only-have-one-shot-player/x.png" alt="A dark room with a red square, with a white X over it." style="max-width:55%"></img>
+
+Are you serious? You're telling me to close the game, by clicking on the X? But I've been told not to close the game. DO YOU really want me to do that? What- what about Niko?
+
+...
+
+With a bit of hesitation, I close the game window.
+
+***
+
+## Separation
+
+I open the game again to see if Niko's ok. Well, he is, just waking up, I guess, in a white void that suddenly turns dark, that's the Tower. So we're finally in the Tower I presume. Niko's in a dark room, wait, where's the sun? Niko? Can you hear me? Niko! **NIKO!!**
+
+# NIKO..!
+
+...
+
+He can't... he can't hear me. I see you Niko, but you can't see me. 
+
+<img src="/images/blog/you-only-have-one-shot-player/lonely.png" alt="Niko inside a dark room, saying: &quot;What's... going on.......&quot;" style="max-width:65%"></img>
+
+But... I can understand your situation, Niko. I'm not there... but I'm also there, or, here. What's going on? My heart feels like it's sinking. Niko thinks I'm gone. 
+
+Niko walks around the dark room, the floor makes the wavy rings of water, like rocks thrown into a pond, for every step he takes. He finds a computer, it's the entity. They speaks to Niko directly now. The entity says that I've left, I wont return, and will never return. A bed appears, they say that once Niko sleeps in the bed, he'll wake up back in his world, as if this was a bad dream. But, Niko expected more. He thought they had to go up the Tower and restore the sun, not...
+
+<img src="/images/blog/you-only-have-one-shot-player/feelswrong.png" alt="Niko interacting a computer and saying: &quot;This feels wrong!&quot;" style="max-width:65%"></img>
+
+Yes, Niko. Indeed, this feels wrong.
+
+...
+
+The computer turns itself off, Niko has no choice but to... sleep on the bed. I never got to properly say goodbye to you too, Niko.
+
+### I will not let this happen.
+
+I'm on my own. But, knowing the nature of this game, there's gotta be something. The first thing I look is my Steam files, going through the many folders to find where the game storage is. I find it, and I also find another executable file. I open it, just a window with a black screen, with a white clover in the middle. Hmm... what if I-
+
+The game opens up to, well, the true final dream sequence. Niko is standing on the same wheat field again. I... can respond: "Niko." He turns around. I'm still here, but...
+
+Niko wakes up, he tries to contact me again. But... I'm "not" here. He finds a black clover in his pocket, and interacts with the computer again. The Entity questions why Niko's still here, then, they contact me. 
+
+The Entity tells me that I should've backed up and never return, but of course, I did not listen. They say that... if I did not want to leave, then they'll make sure I'll never leave.
+
+The room changes from a computer and a bed, to a singular door. Niko opens it.
+
+The executable file that I've mentioned earlier is finally put to use. The window changes to be transparent, with a note that has a cutout of a clover on the bottom right. The rest of the paper is specifically cut out, to direct me to a specific path. Wait, I see what's going on. Niko equips the clover, and I align the clover cut out. 
+
+<img src="/images/blog/you-only-have-one-shot-player/4th.png" alt="A view of my desktop. A transparent window with a paper texture, cut out, is on top of the game window." style="max-width:55%"></img>
+
+Now we're getting somewhere.
+
+After traversing the, maze, I guess, Niko is tasked to draw something out on a square tiled canvas. The other window guides us to create the image, the last one being a lightbulb. Once the lightbulb is completed, the environment changes to a catwalk in the same shape. The sun's there.
+
+<img src="/images/blog/you-only-have-one-shot-player/suncatwalk.png" alt="A series of catwalks that form the shape of the sun (lightbulb)." style="max-width:55%"></img>
+
+Niko approaches the unlit sun, and looks at it. He recalls that I'll never return.
+
+But, I inform Niko, that I'm here.
+
+I've never left you.
+
+I've looked over you as you ventured around.
+
+...
+
+Well, let's grab that sun, shall we?
+
+### Final steps
+
+Niko grabs the lightbulb and- we're in the basement; the same room we first picked up the lightbulb. I guide Niko through the hallways after the living room. The Entity contacts me again, with each time altering the environment and returning back to normal. In summary, the Entity tells me to- shatter the sun? To save the world? Oh, you're playing jokes with me. 
+
+...
+
+Yes? Yeah, I got some help.
+
+Yes. I want to save the world. And maybe even Niko. I am trying.
+
+I- I don't know about this world.
+
+...
+
+My mission... to make Niko leave. I remember.
+
+Niko isn't from-
+
+The only thing that's matter saving?
+
+...
+
+Only one shot. 
+
+Destroy the sun, Niko goes home. Return the sun, Niko...
+
+...
+
+I- I might, I will tell him...
+
+...I care. I do care about Niko.
+
+My heart proceeds to sink even more. We're nearing the end and... you've put me in a tight spot, whoever you are. 
+
+Niko finally takes the elevator that leads to the top of the Tower. As we ascend, I tell Niko everything that the Entity has told me. I do not remain silent, I said the truth. Niko, now knowing this information, he's also in the same tight spot. Home, or saving the world.
+
+We reach the glass room. The top of the tower. We just stood there. I didn't know what to do now. The place where the sun belongs is right in front of us. The decision making... The music that played, being the very first thing I've heard when I booted up the game for the first time.
+
+<img src="/images/blog/you-only-have-one-shot-player/return.png" alt="Two options are layed out. Return home, or return the sun." style="max-width:65%"></img>
+
+...
+
+I could tell Niko to...
+
+<img src="/images/blog/you-only-have-one-shot-player/returnhome.png" alt="Niko looking at the &quot;Return home&quot; option." style="max-width:65%"></img>
+
+or...
+
+<img src="/images/blog/you-only-have-one-shot-player/returnsun.png" alt="Niko looking at the &quot;Return sun&quot; option." style="max-width:65%"></img>
+
+I sat, looking at the screen, switching between the options for 10-15 minutes. I really didn't know what the do...
+
+I was given a trolley problem.
+
+...
+
+I tried to consider what would happen to Niko.
+
+...
+
+...
+
+...
+
+I chose to return the sun.
+
+Niko thinks I'm right, I shouldn't let the others down. The others shouldn't die. And...
+
+<img src="/images/blog/you-only-have-one-shot-player/SOBING.png" alt="Niko saying &quot;Thank you for your help, Mebi. I promise I'll be okay.&quot;" style="max-width:100%"></img>
+
+...Th- thanks for informing me, Niko.
+
+<img src="/images/blog/you-only-have-one-shot-player/vaporize.gif" alt="The sun shines as it returns to it's place." style="max-width:100%"></img>
+
+***
+
+## My opinions
+
+The game felt very, very interesting. The mechanics of the game were like no other. Well, repeating this sentence that I said earlier; I REALLY, really love that the game directly communicates to you, by creating files, changing your wallpaper, heck, using pop-up windows? Oh yeah, even grabbing your system's name, which scared me for a bit. This game, really made me feel emotional. I did not expect for the game to make me feel panicked when Niko and I, were suddenly separated once we got inside the Tower. The puzzles were also interesting. Some puzzles mainly stuck to the base game, while some others, as said before, are solved by exploring your game files. Niko can't solve the rest of the puzzle, but YOU can. It really does amaze me. Do I recommend playing? Y-
+
+<img src="/images/blog/you-only-have-one-shot-player/recommend.gif" alt="An looping animated OneShot textbox." style="max-width:100%"></img>
+
+Oh! Hey Niko! Looks like you've stuck around more than the other two.
+
+Well, that's just the first run of the game. Could I do it... again?
+
+Eh, maybe later. 
+
+***
+
+Thanks for reading this post! Sorry for the prolonged inactivity. Well, until we meet again, very, very soon.
+
+See ya!

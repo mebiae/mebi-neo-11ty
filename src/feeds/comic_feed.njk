@@ -1,10 +1,10 @@
 ---
 {
-  "permalink": "log_feed.xml",
+  "permalink": "comic_feed.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "Mebi County Changelog",
-    "subtitle": "Changelog feed for Mebi County.",
+    "title": "Mebi County Comics",
+    "subtitle": "The feed that keeps all of the comics.",
     "language": "en-us",
     "url": "https://afellowu.neocities.org/",
     "author": {
@@ -13,6 +13,7 @@
   }
 }
 ---
+<!--improve this-->
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -21,12 +22,18 @@
     <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
     <description>{{ metadata.subtitle }}</description>
     <language>{{ metadata.language }}</language>
-    {%- for log in collections.changelog | reverse %}
+    {%- for comic in collections.comic | reverse %}
     <item>
-      <title>{{ log.date.toLocaleDateString("en-CA") }}</title>
+      <title>{{ comic.data.comictitle }}</title>
       <link>{{ metadata.url }}</link>
-      <description><![CDATA[ {{ log.content | safe }} ]]></description>
-      <pubDate>{{ log.date | dateToRfc822 }}</pubDate>
+      <description>
+        <![CDATA[
+            <img src="{{ "https://afellowu.neocities.org" + comic.data.comic }}">
+            <h2>Author's notes:</h2>
+            {{ comic.content | safe }}
+        ]]>
+       </description>
+      <pubDate>{{ comic.date | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ metadata.url }}</guid>
     </item>

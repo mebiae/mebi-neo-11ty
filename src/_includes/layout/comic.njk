@@ -3,6 +3,8 @@ layout: layout/base.njk
 ---
 
 <style>
+    @import "/css/webcomic.css";
+
     .blogposts {
         margin: 2em 0;
     }
@@ -41,27 +43,38 @@ layout: layout/base.njk
     }
 </style>
 
-{% set prevComic = collections.minicomics | getPreviousCollectionItem %}
-{% set nextComic = collections.minicomics | getNextCollectionItem %}
+{% if collections.minicomics %}
+    {% set prevComic = collections.minicomics | getPreviousCollectionItem %}
+    {% set nextComic = collections.minicomics | getNextCollectionItem %}
+{% endif %}
 
 <main>
     <article>
 		<div class="blognav" style="justify-content: space-between;">
-			{% if prevComic %}<a href="{{ prevComic.filePathStem }}">&lt;-- Previous Post</a>{% else %}<span style="color: #444444;">X-- End of list</span>{% endif %}
-        	{% if nextComic %}<a href="{{ nextComic.filePathStem }}">Next Post --&gt;</a>{% else %}<span style="color: #444444;">End of list --X</span>{% endif %}
+			{% if prevComic %}<a href="{{ prevComic.filePathStem }}">&lt;-- Previous Comic</a>{% else %}<span style="color: #444444;">X-- End of list</span>{% endif %}
+        	{% if nextComic %}<a href="{{ nextComic.filePathStem }}">Next Comic --&gt;</a>{% else %}<span style="color: #444444;">End of list --X</span>{% endif %}
 		</div>
         <div class="head-box">
-            <h1>{{ comictitle }}</h1>
-            <p class="indent">{{ comicsub }}</p>
+            <h1>{{ sub }}</h1>
+            <p>{{ comicsub }}</p>
             <p><b>Posted on:</b> {{ page.date.toLocaleDateString("en-CA") }}</p>
         </div>
 
-        <img src="{{ comic }}">
-        {{ content | safe }}
+        <div class="comic">
+            {% for panel in image %}
+                <img src="{{ panel }}" class="panelimage">
+            {% endfor %}
+        </div>
+        {% if content %}
+            <h2>Author's notes:</h2>
+            {{ content | safe }}
+        {% else %}
+            <div style="margin-top: 19.92px;"></div>
+        {% endif %}
         
         <div class="blognav">
-            {% if prevComic %}<a class="nav" href="{{ prevComic.filePathStem }}">&lt;-- Previous Post</a>{% endif %}
-            {% if nextComic %}<a class="nav" href="{{ nextComic.filePathStem }}">Next Post --&gt;</a>{% endif %}
+            {% if prevComic %}<a class="nav" href="{{ prevComic.filePathStem }}">&lt;-- Previous Comic</a>{% endif %}
+            {% if nextComic %}<a class="nav" href="{{ nextComic.filePathStem }}">Next Comic --&gt;</a>{% endif %}
         </div>
     </article>
 </main>

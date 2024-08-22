@@ -1,0 +1,13 @@
+.comic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    border-bottom: 2px solid var(--box-border);
+}
+
+.panelimage {
+    display: inline-block;
+    max-width: 100%;
+}

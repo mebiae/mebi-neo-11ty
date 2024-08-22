@@ -1,6 +1,6 @@
 ---
 title: 
-sub: Comics
+sub: Mini Webcomics
 
 desc:
 metatitle:
@@ -11,6 +11,7 @@ layout: layout/base.njk
 <style>
     a.cat article {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         border: 2px solid var(--box-border);
         background-color: var(--box-back);
@@ -38,7 +39,7 @@ layout: layout/base.njk
     }
 
     a.cat img {
-        max-width: 150px;
+        max-width: 100px;
         border: 2px solid var(--box-border);
         margin-right: 12px;
     }
@@ -46,26 +47,29 @@ layout: layout/base.njk
 
 <main>
     <article>
-        <h1>Mini Comics</h1>
+        <h1>Mini Webcomics</h1>
 
-        <p>Short comics that I randomly make. Features whatever characters I put in there.</p>
+        <p>Short webcomics that I randomly make. Features whatever characters I put in there. Sorted from latest to oldest.</p>
     </article>
 
-    {% if collections.minicomics %}
-        {% for comic in collections.minicomics %}
-            <article>
+    <section>
+        {% if collections.minicomics %}
+            {% for comic in collections.minicomics | reverse %}
                 <a href="{{ comic.filePathStem }}" class="cat">
                     <article>
                         <img src="{{ comic.data.thumb }}">
                         <div>
-                            <h2>{{ comic.data.comictitle }}</h2>
+                            <h2>{{ comic.data.sub }}</h2>
                             <p>{{ comic.data.comicsub }}</p>
+                            <small>Posted on {{ comic.date | UTCA }}</small>
                         </div>
                     </article>
                 </a>
-            </article>
-        {% endfor %}
-    {% endif %}
+            {% endfor %}
+        {% else %}
+            <p>There is nothing, for now. Check back later maybe?</p>
+        {% endif %}
+    </section>
 </main>
 
 <aside>

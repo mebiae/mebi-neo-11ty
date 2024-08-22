@@ -1,0 +1,76 @@
+---
+title: 
+sub: Comics
+
+desc:
+metatitle:
+
+layout: layout/base.njk
+---
+
+<style>
+    a.cat article {
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--box-border);
+        background-color: var(--box-back);
+    }
+
+    a.cat,
+    a.cat:visited,
+    a.cat:hover,
+    a.cat:active {
+        color: var(--text);
+    }
+
+    a.cat article:hover,
+    a.cat article:active {
+        box-shadow: 0 0 15px var(--a-hover);
+    }
+
+    a.cat:hover {
+        position: relative;
+        top: -3px;
+    }
+
+    a.cat:last-child article {
+        margin-bottom: 0;
+    }
+
+    a.cat img {
+        max-width: 150px;
+        border: 2px solid var(--box-border);
+        margin-right: 12px;
+    }
+</style>
+
+<main>
+    <article>
+        <h1>Mini Comics</h1>
+
+        <p>Short comics that I randomly make. Features whatever characters I put in there.</p>
+    </article>
+
+    {% if collections.minicomics %}
+        {% for comic in collections.minicomics %}
+            <article>
+                <a href="{{ comic.filePathStem }}" class="cat">
+                    <article>
+                        <img src="{{ comic.data.thumb }}">
+                        <div>
+                            <h2>{{ comic.data.comictitle }}</h2>
+                            <p>{{ comic.data.comicsub }}</p>
+                        </div>
+                    </article>
+                </a>
+            </article>
+        {% endfor %}
+    {% endif %}
+</main>
+
+<aside>
+    {% include "../../_includes/partials/sidenav.njk" %}
+    <article>
+        {% include "../../_includes/partials/styleswitcher.njk" %}
+    </article>
+</aside>

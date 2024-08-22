@@ -1,0 +1,67 @@
+---
+layout: layout/base.njk
+---
+
+<style>
+    .blogposts {
+        margin: 2em 0;
+    }
+
+    .blognav {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .blognav .nav {
+        text-align: center;
+        background-color: #141a3e;
+        padding: 1em;
+    }
+
+    .indent {
+        padding-left: 1.5em;
+    }
+
+    .head-box {
+        border-bottom: 2px solid var(--box-border);
+        text-align: center;
+    }
+
+    li {
+        margin: 1em 0;
+    }
+
+    hr {
+        margin: 2em 0;
+    }
+
+    h3 {
+        margin-top: 2em;
+    }
+</style>
+
+{% set prevComic = collections.minicomics | getPreviousCollectionItem %}
+{% set nextComic = collections.minicomics | getNextCollectionItem %}
+
+<main>
+    <article>
+		<div class="blognav" style="justify-content: space-between;">
+			{% if prevComic %}<a href="{{ prevComic.filePathStem }}">&lt;-- Previous Post</a>{% else %}<span style="color: #444444;">X-- End of list</span>{% endif %}
+        	{% if nextComic %}<a href="{{ nextComic.filePathStem }}">Next Post --&gt;</a>{% else %}<span style="color: #444444;">End of list --X</span>{% endif %}
+		</div>
+        <div class="head-box">
+            <h1>{{ comictitle }}</h1>
+            <p class="indent">{{ comicsub }}</p>
+            <p><b>Posted on:</b> {{ page.date.toLocaleDateString("en-CA") }}</p>
+        </div>
+
+        <img src="{{ comic }}">
+        {{ content | safe }}
+        
+        <div class="blognav">
+            {% if prevComic %}<a class="nav" href="{{ prevComic.filePathStem }}">&lt;-- Previous Post</a>{% endif %}
+            {% if nextComic %}<a class="nav" href="{{ nextComic.filePathStem }}">Next Post --&gt;</a>{% endif %}
+        </div>
+    </article>
+</main>

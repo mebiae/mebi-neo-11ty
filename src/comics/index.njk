@@ -1,0 +1,74 @@
+---
+title: 
+sub: Comics
+
+desc:
+metatitle:
+
+layout: layout/base.njk
+---
+
+<style>
+    a.cat article {
+        display: flex;
+        align-items: center;
+        border: 2px solid var(--box-border);
+        background-color: var(--box-back);
+    }
+
+    a.cat,
+    a.cat:visited,
+    a.cat:hover,
+    a.cat:active {
+        color: var(--text);
+    }
+
+    a.cat article:hover,
+    a.cat article:active {
+        box-shadow: 0 0 15px var(--a-hover);
+    }
+
+    a.cat:hover {
+        position: relative;
+        top: -3px;
+    }
+
+    a.cat:last-child article {
+        margin-bottom: 0;
+    }
+
+    a.cat img {
+        max-width: 150px;
+        border: 2px solid var(--box-border);
+        margin-right: 12px;
+    }
+</style>
+
+<main>
+    <article>
+        <h1>Comics (still in wip)</h1>
+
+        <p>Welcome to the comics page! Something that I should've created long ago. This is the main hub of the comics; below are the different categories, ranging from short comics, to like, literal comic series. (If I ever plan of one). Well, right now I can offer short comics.</p>
+    </article>
+
+    <article>
+        <h1>Categories</h1>
+
+        <a href="./minicomics" class="cat">
+            <article>
+                <img src="/images/theheavy.png" alt="WHY IS THE HEAVY FROM THE INSTALLMENT OF THE GREAT SECOND SEQUAL FORTRESSES HERE?!??!?!!??!!?!?!?">
+                <div>
+                    <h2>Mini Comics</h2>
+                    <p>Short and silly comics where my characters mess around with others.</p>
+                </div>
+            </article>
+        </a>
+    </article>
+</main>
+
+<aside>
+    {% include "../_includes/partials/sidenav.njk" %}
+    <article>
+        {% include "../_includes/partials/styleswitcher.njk" %}
+    </article>
+</aside>

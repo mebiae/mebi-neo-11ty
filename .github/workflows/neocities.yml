@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     # Set up any tools and build steps here
     # This example uses a Node.js toolchain to build a site
     - name: Use Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: lts/*
     - name: Install deps and build
@@ -28,7 +28,7 @@ jobs:
         npm run build
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
-      uses: bcomnes/deploy-to-neocities@v1
+      uses: bcomnes/deploy-to-neocities@v2
       with:
         api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
         cleanup: true

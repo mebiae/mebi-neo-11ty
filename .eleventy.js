@@ -68,13 +68,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/fonts");
     eleventyConfig.addPassthroughCopy("./src/js");
+
     eleventyConfig.setTemplateFormats([
       "njk",
       "md",
       "css"
     ]);
-
-    eleventyConfig.addWatchTarget("./src/_includes/layout");
 
     //Filters
     eleventyConfig.addFilter("limit", function (array, limit) {

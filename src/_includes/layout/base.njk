@@ -4,14 +4,10 @@
         <meta charset="UTF-8">
         <title>
             {% if title %}
-                {{title}}
                 {% if title and sub %}
-                    - {{sub}}
+                    {{sub}} | 
                 {% endif %}
-            {% elif sub %}
-                Mebi County - {{sub}}
-            {% else %}
-                Mebi County
+                {{title}}
             {% endif %}
         </title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">

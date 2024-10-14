@@ -24,6 +24,18 @@ layout: layout/main.njk
     </article>
 
     <article>
+      <h1>Changelog</h1>
+        <div id="update" style="max-height: 1000px;">
+          {% for post in changelog | reverse %}
+          {% changelogHTML
+            post.date,
+            post.info
+          %}
+          {% endfor %}
+        </div>
+    </article>
+
+    <article>
         <h1>Pre-overhaul Changelog</h1>
         <p>Do note that the links here might or might not be broken.</p>
         <div id="update" style="max-height: 1000px;">

@@ -3,6 +3,7 @@ const sass = require("sass");
 const path = require("node:path");
 const browserlist = require("browserslist");
 const { bundle, transform, browserslistToTargets, composeVisitors } = require("lightningcss");
+const { type } = require("node:os");
 
 module.exports = function (eleventyConfig) {
 
@@ -85,6 +86,24 @@ module.exports = function (eleventyConfig) {
         timeZone: "UTC"
       });
     });
+
+    eleventyConfig.addShortcode(
+      "changelogHTML",
+      function (date, info) {
+
+        if (Array.isArray(info)) {
+          bulletList = info.map((l) => `<li>${l}</li>`).join("");
+        } else if (typeof info == "string") {
+          bulletList = `<li>${info}</li>`;
+        }
+
+        return `
+        <h2>${date}</h2>
+        <ul>
+        ${bulletList}
+        </ul>`
+      }
+    );
 
     //Plugins
     eleventyConfig.addPlugin(pluginRss);

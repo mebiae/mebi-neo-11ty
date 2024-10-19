@@ -86,10 +86,11 @@ module.exports = function (eleventyConfig) {
         timeZone: "UTC"
       });
     });
-
+    
+    //Shortcodes
     eleventyConfig.addShortcode(
-      "changelogHTML",
-      function (date, info) {
+      "logHTML",
+      function (info) {
 
         if (Array.isArray(info)) {
           bulletList = info.map((l) => `<li>${l}</li>`).join("");
@@ -98,7 +99,6 @@ module.exports = function (eleventyConfig) {
         }
 
         return `
-        <h2>${date}</h2>
         <ul>
         ${bulletList}
         </ul>`

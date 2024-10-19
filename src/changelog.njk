@@ -23,14 +23,13 @@ layout: layout/main.njk
         </div>
     </article>
 
+    {# RSS date formatting is impeding progress to condense changelog markdown files to a single JSON file. #}
     <article>
       <h1>Changelog</h1>
         <div id="update" style="max-height: 1000px;">
-          {% for post in changelog | reverse %}
-          {% changelogHTML
-            post.date,
-            post.info
-          %}
+          {% for log in changelog | reverse %}
+          <h2>{{ log.date }}</h2>
+          {% logHTML log.info %}
           {% endfor %}
         </div>
     </article>

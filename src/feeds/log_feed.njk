@@ -21,12 +21,12 @@
     <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
     <description>{{ metadata.subtitle }}</description>
     <language>{{ metadata.language }}</language>
-    {%- for log in collections.changelog | reverse %}
+    {%- for log in changelog | reverse %}
     <item>
-      <title>{{ log.date.toLocaleDateString("en-CA") }}</title>
+      <title>{{ log.date }}</title>
       <link>{{ metadata.url }}</link>
-      <description><![CDATA[ {{ log.content | safe }} ]]></description>
-      <pubDate>{{ log.date | dateToRfc822 }}</pubDate>
+      <description><![CDATA[ {% logHTML log.info %} ]]></description>
+      <pubDate>{{ log.date | stringToTime | dateToRfc822 }}</pubDate>
       <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ metadata.url }}</guid>
     </item>

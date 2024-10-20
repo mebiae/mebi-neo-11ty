@@ -4,8 +4,17 @@ const path = require("node:path");
 const browserlist = require("browserslist");
 const { bundle, transform, browserslistToTargets, composeVisitors } = require("lightningcss");
 const { type } = require("node:os");
+const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
+
+    let mdOptions = {
+      html: true,
+      breaks: true,
+      linkify: true
+    };
+
+    eleventyConfig.setLibrary("md", markdownIt(mdOptions))
 
     //De-index.html the output
     eleventyConfig.addGlobalData("permalink", () => {
@@ -86,24 +95,37 @@ module.exports = function (eleventyConfig) {
         timeZone: "UTC"
       });
     });
+
+    eleventyConfig.addFilter("stringToTime", function(time) {
+      return new Date(time)
+    });
     
     //Shortcodes
     eleventyConfig.addShortcode(
       "logHTML",
       function (info) {
 
+        let bulletList
+        let bulletList2
+
         if (Array.isArray(info)) {
-          bulletList = info.map((l) => `<li>${l}</li>`).join("");
+          bulletList = info.map((l) => `- ${l}`).join("");
         } else if (typeof info == "string") {
-          bulletList = `<li>${info}</li>`;
+          bulletList = `- ${info}`;
         }
 
-        return `
-        <ul>
-        ${bulletList}
-        </ul>`
+        return new markdownIt().render(`${bulletList}`);
       }
     );
+
+    /*eleventyConfig.addShortcode(
+      "logHTML",
+      function (info) {
+        if (Array.isArray(info)) {
+          return new markdownIt().render(info);
+        }
+      }
+    );*/
 
     //Plugins
     eleventyConfig.addPlugin(pluginRss);

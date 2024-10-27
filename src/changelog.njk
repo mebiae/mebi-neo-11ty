@@ -10,20 +10,6 @@ layout: layout/main.njk
 
 <main>
     <article>
-        <h1>Changelog</h1>
-        <div id="update" style="max-height: 1000px;">
-            {% if collections.changelog %}
-                {% for log in collections.changelog | reverse %}
-                <h2>{{ log.date | UTCA }}</h2>
-                {{ log.content | safe }}
-                {% endfor %}
-            {% else %}
-                <h3>No updates to display.</h3>
-            {% endif %}
-        </div>
-    </article>
-
-    <article>
       <h1>Changelog</h1>
         <div id="update" style="max-height: 1000px;">
           {% for log in changelog | reverse %}

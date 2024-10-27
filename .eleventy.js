@@ -16,12 +16,12 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setLibrary("md", markdownIt(mdOptions))
 
-    //De-index.html the output
+    // De-index.html the output
     eleventyConfig.addGlobalData("permalink", () => {
       return (data) => `${data.page.filePathStem}.${data.page.outputFileExtension}`;
     });
 
-    //Add Sass support
+    // Add Sass support
     eleventyConfig.addTemplateFormats("scss");
     eleventyConfig.addExtension("scss", {
       outputFileExtension: "css",
@@ -53,7 +53,7 @@ module.exports = function (eleventyConfig) {
       },
     });
 
-    //Minify CSS if it ends with "min.css"
+    // Minify CSS if it ends with "min.css"
     eleventyConfig.addTemplateFormats("min.css");
     eleventyConfig.addExtension("min.css", {
       outputFileExtension: "min.css",
@@ -74,7 +74,7 @@ module.exports = function (eleventyConfig) {
       },
     });
 
-    //Get assets
+    // Get assets
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/fonts");
     eleventyConfig.addPassthroughCopy("./src/js");
@@ -85,7 +85,7 @@ module.exports = function (eleventyConfig) {
       "css"
     ]);
 
-    //Filters
+    // Filters
     eleventyConfig.addFilter("limit", function (array, limit) {
       return array.slice(0, limit);
     });
@@ -100,34 +100,37 @@ module.exports = function (eleventyConfig) {
       return new Date(time)
     });
     
-    //Shortcodes
+    // Shortcodes
     eleventyConfig.addShortcode(
       "logHTML",
       function (info) {
 
         let bulletList
-        let bulletList2
+        let globaL
 
         if (Array.isArray(info)) {
-          bulletList = info.map((l) => `- ${l}`).join("");
+          bulletList = info.map((l) => `<li>${l}</li>`).join("");
         } else if (typeof info == "string") {
-          bulletList = `- ${info}`;
+          bulletList = `<li>${info}</li>`;
         }
+        
+        // Not the best way, I just want to end this. (indented bullet items)
+        bulletList = bulletList.replaceAll("-/", "<ul>");
+        bulletList = bulletList.replaceAll("/-", "</ul>");
+        bulletList = bulletList.replaceAll("~~", "<li>");
+        bulletList = bulletList.replaceAll("~", "</li>");
 
-        return new markdownIt().render(`${bulletList}`);
+        //let final = new markdownIt().render(bulletList);
+
+        return `
+        <ul>
+        ${bulletList}
+        </ul>
+        `
       }
     );
 
-    /*eleventyConfig.addShortcode(
-      "logHTML",
-      function (info) {
-        if (Array.isArray(info)) {
-          return new markdownIt().render(info);
-        }
-      }
-    );*/
-
-    //Plugins
+    // Plugins
     eleventyConfig.addPlugin(pluginRss);
 
     return {

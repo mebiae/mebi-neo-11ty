@@ -57,10 +57,10 @@ layout: layout/main.njk
         <h1>Changelog</h1>
         <h3>Site last updated: <span id="lastupdate"><script type="text/javascript" src="/js/updates-visitors.js"></script></span></h3>
         <div id="update">
-            {% if collections.changelog %}
-                {% for log in collections.changelog | reverse | limit(5) %}
-                <h2>{{ log.date | UTCA }}</h2>
-                {{ log.content | safe }}
+            {% if changelog %}
+                {% for log in changelog | reverse | limit(5) %}
+                <h2>{{ log.date }}</h2>
+                {% logHTML log.info %}
                 {% endfor %}
             {% else %}
                 <h3>No updates to display.</h3>
@@ -127,9 +127,10 @@ layout: layout/main.njk
         <ul>
             <li>Tune this site to my likings</li>
             <li>Add new styles</li>
-            <li>Add a Lua tutorial page</li>
+            <li title="might never ever do">Add a Lua tutorial page</li>
             <li>Make an interactive map of Aethepor</li>
             <li>Add more sites in the Sites page</li>
+            <li>Revamp the OCs page</li>
         </ul>
     </article>
     <article style="text-align: center;">

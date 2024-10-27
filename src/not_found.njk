@@ -1,11 +1,11 @@
 ---
-title: 404
-sub: Uh Oh!
+title: Dead end!
+sub:
 
 desc:
 metatitle:
 
-layout: layout/base.njk
+layout: layout/responsive.njk
 ---
 
 <style>
@@ -33,11 +33,15 @@ layout: layout/base.njk
         column-gap: 6em;
         row-gap: 1em;
     }
+
+    main {
+        margin-top: 8em;
+    }
 </style>
 
 <main>
-    <article style="text-align: center;">
-        <h1>Not Found!</h1>
+    <div style="text-align: center;">
+        <h1>Dead end; whoops.</h1>
         <p>Trying to find something that doesn't exist within this county? Well, that thing is yet to be here, is gone temporarily, or permanently. For now, how about you:</p>
         
         <div id="container">
@@ -63,5 +67,5 @@ layout: layout/base.njk
             </div>
         </div>
         
-    </article>
+    </div>
 </main>

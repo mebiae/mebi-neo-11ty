@@ -1,25 +1,21 @@
 ---
-title: 
+title: Mebi County
 sub: Changelog
 
 desc:
 metatitle:
 
-layout: layout/base.njk
+layout: layout/main.njk
 ---
 
 <main>
     <article>
-        <h1>Changelog</h1>
+      <h1>Changelog</h1>
         <div id="update" style="max-height: 1000px;">
-            {% if collections.changelog %}
-                {% for log in collections.changelog | reverse %}
-                <h2>{{ log.date | UTCA }}</h2>
-                {{ log.content | safe }}
-                {% endfor %}
-            {% else %}
-                <h3>No updates to display.</h3>
-            {% endif %}
+          {% for log in changelog | reverse %}
+          <h2>{{ log.date }}</h2>
+          {% logHTML log.info %}
+          {% endfor %}
         </div>
     </article>
 

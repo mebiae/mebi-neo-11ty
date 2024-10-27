@@ -1,17 +1,27 @@
 ---
-title:
+title: Mebi County
 sub: Sitemap
 
 desc:
 metatitle:
 
-layout: layout/base.njk
+layout: layout/main.njk
 ---
 <style>
     main li {
         line-height: 2em;
     }
+
+    main {
+        max-width: 470px;
+    }
+
+    #flex {
+        justify-content: center;
+    }
 </style>
+
+<script>console.log("the purpose??///??////???///???????/")</script>
 
 <main>
     <article>
@@ -43,10 +53,3 @@ layout: layout/base.njk
         </ul>
     </article>
 </main>
-
-<aside>
-    {% include "./_includes/partials/sidenav.njk" %}
-    <article>
-        {% include "./_includes/partials/styleswitcher.njk" %}
-    </article>
-</aside>

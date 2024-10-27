@@ -148,7 +148,7 @@ nav {
     column-gap: 0.2em;
     row-gap: 0.2em;
     
-    a {
+    a, button {
         font-family: DOS;
         font-size: 1.17em;
         text-align: center;
@@ -163,7 +163,33 @@ nav {
             transition: 0.1s;
         }
     }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+
+        button {
+            border: none;
+            color: var(--a-link);
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin-top: 2px;
+            @extend %base;
+
+            a {
+                display: block;
+                margin: 2px;
+            }
+        }
+    }
 }
+
+.show {display: block !important;}
 
 footer {
     @extend %base;

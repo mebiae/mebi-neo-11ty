@@ -1,0 +1,80 @@
+[
+    {
+        "date": "2023-12-01",
+        "info": [
+            "Well, that took a while but now the entire site has been converted to 11ty! -/ ~~New site layout as well! More styles and decoration will be added later sometime.~ ~~OCs page redone, although I'm not really satisfied with the current design.~ /-",
+            "Blog page added! Finally, a place where I can let out some thoughts from my head.",
+            "Gallery has been improved with <a href=https://netfriend.neocities.org/ez-gallery/>EZ Gallery</a>! -/ ~~I'll need to find a way to add descriptions to each image.~ /-",
+            "Added more sites to the Sites page!"
+        ]
+    },
+    {
+        "date": "2023-12-05",
+        "info": [
+            "Gallery has been improved with <a href=https://status.cafe>status.cafe</a>!"
+        ]
+    },
+    {
+        "date": "2023-12-16",
+        "info": [
+            "Readded the classic (pre-overhaul) styles back to the styleswitcher.",
+            "Added some links in the Sites page."
+        ]
+    },
+    {
+        "date": "2023-12-18",
+        "info": [
+            "Added a sitemap.",
+            "Replaced the TF2 Heavy placeholders in the 404 page."
+        ]
+    },
+    {
+        "date": "2023-12-23",
+        "info": [
+            "Added a Christmas theme to the site! It might not be good for now, but I'll improve it later!",
+            "Added some sites in the Sites page."
+        ]
+    },
+    {
+        "date": "2023-12-27",
+        "info": [
+            "Added more sites!",
+            "Rewritten the About Me page again."
+        ]
+    },
+    {
+        "date": "2024-01-20",
+        "info": [
+            "Slightly tweaked the OCs page. I might begin to work on and archive some information there.",
+            "Added a site to the Sites page."
+        ]
+    },
+    {
+        "date": "2024-03-16",
+        "info": [
+            "Added three sites on the Sites page."
+        ]
+    },
+    {
+        "date": "2024-08-16",
+        "info": [
+            "Sorry for the sudden prolonged inactivity here. IRL stuff and no coding motivation made me go away for a bit.",
+            "Added blog post pagination navigation to the top of every post for convenience.",
+            "Added a small decorational card in the About me page."
+        ]
+    },
+    {
+        "date": "2024-08-22",
+        "info": [
+            "New page: <a href=https://afellowu.neocities.org/webcomics>Webcomics</a>!"
+        ]
+    },
+    {
+        "date": "2024-10-27",
+        "info": [
+            "Site's code has gone through a slight rewrite. -/ ~~Mostly backend stuff, such as the changelog now condensed into a single JSON file.~ ~~It honestly looks a bit terrible; the parsing code.~ /-",
+            "Sites in the Sites page will have a red border around it if the site no longer exists.",
+            "Webcomics link added to mobile nav."
+        ]
+    }
+]

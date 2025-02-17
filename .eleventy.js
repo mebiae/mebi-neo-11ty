@@ -1,62 +1,20 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const sass = require("sass");
 const path = require("node:path");
 const browserlist = require("browserslist");
 const { bundle, transform, browserslistToTargets, composeVisitors } = require("lightningcss");
 const { type } = require("node:os");
-const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
-
-    let mdOptions = {
-      html: true,
-      breaks: true,
-      linkify: true
-    };
-
-    eleventyConfig.setLibrary("md", markdownIt(mdOptions))
 
     // De-index.html the output
     eleventyConfig.addGlobalData("permalink", () => {
       return (data) => `${data.page.filePathStem}.${data.page.outputFileExtension}`;
     });
 
-    // Add Sass support
-    eleventyConfig.addTemplateFormats("scss");
-    eleventyConfig.addExtension("scss", {
+    // Minify CSS
+    eleventyConfig.addTemplateFormats("css");
+    eleventyConfig.addExtension("css", {
       outputFileExtension: "css",
-
-      compile: async function(inputContent, inputPath) {
-        let parsed = path.parse(inputPath);
-        if (parsed.name.startsWith("_")) {
-          return;
-        }
-
-        let result = sass.compileString(inputContent, {
-          loadPaths: [parsed.dir || "."],
-          sourceMap: false,
-        });
-
-        this.addDependencies(inputPath, result.loadedUrls);
-
-        let targets = browserslistToTargets(browserlist("> 0.2% and not dead"))
-
-        return async () => {
-          let { code } = await transform({
-            code: Buffer.from(result.css),
-            minify: true,
-            sourceMap: false,
-            targets,
-          });
-          return code;
-        };
-      },
-    });
-
-    // Minify CSS if it ends with "min.css"
-    eleventyConfig.addTemplateFormats("min.css");
-    eleventyConfig.addExtension("min.css", {
-      outputFileExtension: "min.css",
 
       compile: async function(_inputContent, inputPath) {
         
@@ -68,6 +26,9 @@ module.exports = function (eleventyConfig) {
             minify: true,
             sourceMap: false,
             targets,
+            drafts: {
+              nesting: true
+            },
           });
           return code;
         };
@@ -135,7 +96,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
 
     return {
-    passthroughFileCopy: true,
+      passthroughFileCopy: true,
+      htmlTemplateEngine: "njk",
+      markdownTemplateEngine: "njk",
       dir: {
         input: "src",
         output: "public",

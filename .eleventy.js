@@ -44,7 +44,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setTemplateFormats([
       "njk",
       "md",
-      "css"
+      "css",
+      "html"
     ]);
 
     // Filters
@@ -61,36 +62,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("stringToTime", function(time) {
       return new Date(time)
     });
-    
-    // Shortcodes
-    eleventyConfig.addShortcode(
-      "logHTML",
-      function (info) {
-
-        let bulletList
-        let globaL
-
-        if (Array.isArray(info)) {
-          bulletList = info.map((l) => `<li>${l}</li>`).join("");
-        } else if (typeof info == "string") {
-          bulletList = `<li>${info}</li>`;
-        }
-        
-        // Not the best way, I just want to end this. (indented bullet items)
-        bulletList = bulletList.replaceAll("-/", "<ul>");
-        bulletList = bulletList.replaceAll("/-", "</ul>");
-        bulletList = bulletList.replaceAll("~~", "<li>");
-        bulletList = bulletList.replaceAll("~", "</li>");
-
-        //let final = new markdownIt().render(bulletList);
-
-        return `
-        <ul>
-        ${bulletList}
-        </ul>
-        `
-      }
-    );
 
     // Plugins
     eleventyConfig.addPlugin(pluginRss);

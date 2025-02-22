@@ -1,145 +1,17 @@
 ---
 title: Mebi County
-sub:
+subtitle:
 
-desc:
-metatitle:
+meta_title:
+meta_description:
 
 layout: layout/main.njk
 ---
-<style>
-    #snip {
-        resize: none;
-        color: var(--a-link);
-        border: 2px solid var(--box-border);
-        background-color: var(--box-back);
-        font-family: NEC;
-        height: 80px;
-    }
 
-    section > a > article {
-        border: 2px solid var(--box-border);
-        background-color: var(--box-back);
-    }
-
-    section > a,
-    section > a:visited,
-    section > a:hover,
-    section > a:active {
-        color: var(--text);
-    }
-
-    section > a > article:hover,
-    section > a > article:active {
-        box-shadow: 0 0 15px var(--a-hover);
-    }
-
-    section > a:hover {
-        position: relative;
-        top: -3px;
-    }
-
-    section > a:last-child article {
-        margin-bottom: 0;
-    }
-</style>
 <main>
-    <article>
-        <h1>Welcome to Mebi County!</h1>
-        <p>Greetings, traveler. This is my place where I'll talk about and share my stuff here and other things. Venture around in this here county, and I hope you'll feel cozy.</p>
-
-        <p>I've been programming since 2015, first starting off with Scratch. Around 2020-2021 is when I started to learn Lua. It was not until 2023 when I started learning HTML and CSS after seeing a Tumblr post that led to Neocities. Now, I just enjoy maintaining my website and adding more stuff.</p>
-
-        <p>Most of the <a href="https://github.com/mebiae/mebi-neo-11ty">site's code</a> here is written by me. Feel free to use the code to help you make your own website! I know you can do it! One more thing, if you find anything off or have a suggestion for this website, feel free to create an issue or pull request!</p>
-    </article>
-
-    <article class="update">
-        <h1>Changelog</h1>
-        <h3>Site last updated: <span id="lastupdate"><script type="text/javascript" src="/js/updates-visitors.js"></script></span></h3>
-        <div id="update">
-            {% if changelog %}
-                {% for log in changelog | reverse | limit(5) %}
-                <h2>{{ log.date }}</h2>
-                {% logHTML log.info %}
-                {% endfor %}
-            {% else %}
-                <h3>No updates to display.</h3>
-            {% endif %}
-        </div>
-        <h3><a href="/changelog">Full changelog --&gt;</a></h3>
-        <small><a href="/log_feed.xml">Changelog RSS</a></small>
-    </article>
-
-    <marquee onmouseover="this.stop()" onmouseout="this.start()">
-        <img src="https://i.imgur.com/o3gt1eA.gif">
-        <img src="/images/buttons/made_with_windows.gif">
-        <img src="/images/buttons/html_learn_it_today.gif">
-        <img src="/images/buttons/internet_now02.gif">
-        <img src="/images/buttons/hosted_on_neocities.gif">
-        <img src="/images/buttons/got_html.gif">
-        <img src="/images/buttons/tumblr.jpg">
-        <img src="/images/buttons/www_1991.png">
-        <img src="/images/buttons/can_iam.gif">
-        <img src="/images/buttons/dos.png">
-        <img src="/images/buttons/nojs_nowork.gif">
-        <img src="/images/buttons/now20.gif">
-        <img src="/images/buttons/nvidia.gif">
-        <img src="/images/buttons/office97.gif">
-    </marquee>
-
-    <section>
-        <h1>Recent Blogs</h1>
-        {% if collections.blogs %}
-            {% for post in collections.blogs | reverse | limit(3) %}
-                <a href="{{ post.filePathStem }}">
-                    <article>
-                        <h2>{{ post.data.sub }}</h2>
-                        <p>{{ post.data.blogdesc }}</p>
-                    <small>Posted on {{ post.date | UTCA }}</small>
-                    </article>
-                </a>
-            {% endfor %}
-        {% else %}
-            <h3>Hm, no blog posts, for now.</h3>
-        {% endif %}
-
-        <h3><a href="/blog">See more --&gt;</a></h3>
-        <small><a href="/blog_feed.xml">Blog RSS</a></small>
-    </section>
+    <p>main</p>
 </main>
 
 <aside>
-    {% include "./_includes/partials/sidenav.njk" %}
-    <article>
-        {% include "./_includes/partials/styleswitcher.njk" %}
-        <p style="text-align: center;"><b>You are visitor:</b> #<span id="hitcount"><script type="text/javascript" src="/js/updates-visitors.js"></script></span></p>
-    </article>
-    <article>
-        <p style="text-align: center;">Current Status:</p>
-        <div id="statuscafe">
-            <div id="statuscafe-username"></div>
-            <div id="statuscafe-content"></div>
-        </div>
-        <script src="https://status.cafe/current-status.js?name=mebiae" defer></script>
-    </article>
-    <article>
-        <h1>To-do list</h1>
-        <ul>
-            <li>Tune this site to my likings</li>
-            <li>Add new styles</li>
-            <li title="might never ever do">Add a Lua tutorial page</li>
-            <li>Make an interactive map of Aethepor</li>
-            <li>Add more sites in the Sites page</li>
-            <li>Revamp the OCs page</li>
-        </ul>
-    </article>
-    <article style="text-align: center;">
-        <img src="/images/buttons/mebi_county.gif" alt="Site button">
-        <textarea readonly id="snip">
-            <a href="https://afellowu.neocities.org/" target="_blank">
-                <img src="https://afellowu.neocities.org/images/buttons/mebi_county.gif" alt="Mebi County">
-            </a>
-        </textarea>
-        <div><small>Hotlink if you wish to.</small></div>
-    </article>
+    <p>aside</p>
 </aside>

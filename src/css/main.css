@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    scrollbar-color: var(--scroll-background) var(--scroll-border);
+}
+
+body {  
+    color: black;
+    font-family: NEC;
+    background: #838383;
+    background-attachment: var(--backbool);
+}
+
+p {
+    line-height: 1.3em;
+}
+
+#flex {
+    display: flex;
+}
+
+#page {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+}

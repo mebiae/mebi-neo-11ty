@@ -8,10 +8,78 @@ meta_description:
 layout: layout/main.njk
 ---
 
+<script type="text/javascript" src="/js/updates-visitors.js"></script>
+
+<aside id="left">
+    <section>
+        <h2>The Webmaster</h2>
+        <article id="pfp-base">
+            <img src="/images/mebi.jpg" alt="mebi" id="pfp">
+            <h3>Mebi Aether</h3>
+            <p>Mebiae</p>
+        </article>
+    </section>
+    <section>
+        <h2>Site Stats</h2>
+        <article>
+            <p>Last updated: <span id="lastupdate"></span></p>
+            <p>You are: #<span id="hitcount"></script></span></p>
+        </article>
+    </section>
+</aside>
+
 <main>
-    <p>main</p>
+    <section>
+        <p>Heya! Welcome! Greetings! To Mebi County! This is were I, Webmaster Mebi, do basically whatever I want to do here.</p>
+        <p>Art is what I do the most. I also play some games and mess around. One day I'll be programming games and making 3D models.</p>
+    </section>
+    <hr>
+    <marquee behavior="alternate">
+        <img src="/images/buttons/bestviewed.gif">
+        <img src="/images/buttons/made_with_windows.gif">
+        <img src="/images/buttons/html_learn_it_today.gif">
+        <img src="/images/buttons/internet_now02.gif">
+        <img src="/images/buttons/hosted_on_neocities.gif">
+        <img src="/images/buttons/got_html.gif">
+        <img src="/images/buttons/tumblr.jpg">
+        <img src="/images/buttons/www_1991.png">
+        <img src="/images/buttons/can_iam.gif">
+        <img src="/images/buttons/dos.png">
+        <img src="/images/buttons/nojs_nowork.gif">
+        <img src="/images/buttons/now20.gif">
+        <img src="/images/buttons/nvidia.gif">
+        <img src="/images/buttons/office97.gif">
+    </marquee>
+    <hr>
+    <h1>Recent Blog Posts</h1>
+    {% if collections.blogs %}
+        {% for post in collections.blogs | reverse | limit(3) %}
+        <a href="{{ post.filePathStem }}">
+            <article>
+                <h2>{{ post.data.subtitle }}</h2>
+                <p>{{ post.data.blog_description }}</p>
+                <small>Posted on {{ post.date | UTCA }}</small>
+            </article>
+        </a>
+        {% endfor %}
+    {% else %}
+        <p>Hm, no blog posts, for now.</p>
+    {% endif %}
 </main>
 
-<aside>
-    <p>aside</p>
+<aside id="right">
+    {% include "partials/navbar.njk" %}
+    <section>
+        <h2>Changelog</h2>
+        <article id="updates">
+            {% if collections.changelog %}
+                {% for log in collections.changelog | reverse | limit(5) %}
+                    <h2>{{ log.date | UTCA }}</h2>
+                    {{ log.content | safe }}
+                {% endfor %}
+            {% else %}
+                <h3>No updates to display.</h3>
+            {% endif %}
+        </article>
+    </section>
 </aside>

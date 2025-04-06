@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/images/starry.gif");
+    image-rendering: pixelated;
+    color: white;
+}
+
+details {
+    position: fixed;
+    width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+#page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#flex,
+.main-flex {
+    display: flex;
+}
+
+.main-flex {
+    margin-bottom: 8px;
+}
+
+.main-flex article {
+    margin-right: 8px;
+
+    &:last-of-type {
+        margin: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+article {
+    border: 1px solid white;
+    padding: 10px;
+    width: 100%;
+
+    main > & {
+        margin-bottom: 8px;
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+}
+
+.nav-button {
+    border: 1px solid white;
+    padding: 6px;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+
+    
+
+    &:hover {
+        position: relative;
+        top: -4px;
+    }
+}
+
+main {
+    flex: 1;
+    order: 2;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+aside {
+    width: 200px;
+    padding: 0 8px;
+
+    nav {
+        position: sticky;
+        top: 8px;
+        border: 1px solid white;
+        padding: 10px;
+
+        a:last-of-type .nav-button {
+            margin: 0;
+        }
+    }
+
+    &#left {
+        order: 1;
+    }
+
+    &#right {
+        order: 3;
+    }
+}
+
+@media (max-width: 850px) {
+    details {
+        display: block;
+    }
+
+    aside {
+        display: none;
+    }
+}

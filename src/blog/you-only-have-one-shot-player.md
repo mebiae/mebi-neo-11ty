@@ -1,6 +1,6 @@
 ---
-sub: You only have one shot, player.
-blogdesc: My experience and opinions on the game OneShot. (More like a described playthrough) (Spoilers!!!)
+subtitle: You only have one shot, player.
+blog_description: My experience and opinions on the game OneShot. (More like a described playthrough) (Spoilers!!!)
 date: 2024-08-16
 ---
 

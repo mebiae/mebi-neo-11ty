@@ -1,8 +1,10 @@
 ---
-sub: 11ty, GitHub and Neocities
-blogdesc: Building a site using 11ty and deploying it to Neocities.
+subtitle: 11ty, GitHub and Neocities
+blog_description: Building a site using 11ty and deploying it to Neocities.
 date: 2023-12-03
 ---
+
+# FOR USE WITH 11TY >=2.0.1 AND DEPLOY TO NEOCITIES >=2.0.4
 
 Woah, first blog on this website! Hey y'all, this blog post will be talking about using Eleventy (or 11ty) and using GitHub to deploy your site onto Neocities! People like me, you and others might've used the built-in Neocities code editor to edit your sites before, and later noticed on how tedious it was to copy and paste the same code on different pages. You've probably tried to find a more faster and efficient way of doing this, well there is! This guide might take at least 30 minutes or less, depending on you, but once you finish this guide, you will be happy that you made the change.
 

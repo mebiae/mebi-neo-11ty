@@ -1,6 +1,6 @@
 ---
-sub: What's happening, Mebi?
-blogdesc: Just talking about what's been happening while I was offline here.
+subtitle: What's happening, Mebi?
+blog_description: Just talking about what's been happening while I was offline here.
 date: 2024-03-16
 ---
 

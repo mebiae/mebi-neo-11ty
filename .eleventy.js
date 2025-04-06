@@ -2,9 +2,9 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const path = require("node:path");
 const browserlist = require("browserslist");
 const { bundle, transform, browserslistToTargets, composeVisitors } = require("lightningcss");
-const { type } = require("node:os");
+const sass = require("sass");
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
 
     // De-index.html the output
     eleventyConfig.addGlobalData("permalink", () => {
@@ -35,6 +35,34 @@ module.exports = function (eleventyConfig) {
       },
     });
 
+    eleventyConfig.addTemplateFormats("scss");
+    eleventyConfig.addExtension("scss", {
+      outputFileExtension: "css",
+
+      compile: async function(_inputContent, inputPath) {
+        let parsed = path.parse(inputPath);
+
+        let result = sass.compileString(_inputContent, {
+          loadPaths: [parsed.dir || "."],
+          sourceMap: false,
+        });
+
+        this.addDependencies(inputPath, result.loadedUrls);
+
+        let targets = browserslistToTargets(browserlist("> 0.2% and not dead"));
+
+        return async () => {
+          let { code } = await transform({
+            code: Buffer.from(result.css),
+            minify: true,
+            sourceMap: false,
+            targets,
+          });
+          return code;
+        };
+      },
+    });
+
     // Get assets
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/fonts");
@@ -49,7 +77,7 @@ module.exports = function (eleventyConfig) {
     ]);
 
     // Filters
-    eleventyConfig.addFilter("limit", function (array, limit) {
+    eleventyConfig.addFilter("limit", function(array, limit) {
       return array.slice(0, limit);
     });
 

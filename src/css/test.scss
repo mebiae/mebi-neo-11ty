@@ -1,3 +1,36 @@
+@use "sass:color";
+
+$main: rgb(32, 43, 38);
+$border: color.adjust($main, $saturation: 10, $lightness: 52);
+
+// Fonts
+
+@font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito_Regular.ttf");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito_Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito_Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito_Bold_Italic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+// CSS
+
 * {
     box-sizing: border-box;
 }
@@ -6,6 +39,8 @@ body {
     background-image: url("/images/starry.gif");
     image-rendering: pixelated;
     color: white;
+    font-family: 'Nunito', sans-serif, 'Segoe UI';
+    font-size: 0.86em;
 }
 
 details {
@@ -22,20 +57,16 @@ details {
     margin: 0 auto;
 }
 
-#flex,
-.main-flex {
-    display: flex;
-}
+#updates {
+    border: 1px solid $main;
+    padding: 10px;
+    max-height: 140px;
+    overflow: auto;
+    border-radius: 6px;
 
-.main-flex {
-    margin-bottom: 8px;
-}
-
-.main-flex article {
-    margin-right: 8px;
-
-    &:last-of-type {
-        margin: 0;
+    h2 {
+        background-color: $main;
+        padding: 5px;
     }
 }
 
@@ -48,27 +79,62 @@ h6 {
     margin: 0;
 }
 
-article {
-    border: 1px solid white;
-    padding: 10px;
-    width: 100%;
+h1 {
+    margin-top: 10px;
+}
 
-    main > & {
+h2 {
+    padding: 8px 0;
+}
+
+hr {
+    margin: 8px 0;
+    border: 0;
+    border-bottom: 1px solid $border;
+}
+
+.flex {
+    display: flex;
+
+    &-main {
+        @extend .flex;
         margin-bottom: 8px;
 
-        &:last-of-type {
+        &:last-child {
             margin: 0;
         }
     }
 }
 
+.container {
+    width: 100%;
+    margin-right: 8px;
+
+    &:last-of-type {
+        margin: 0;
+    }
+
+    &-unflex {
+        @extend .container;
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.content {
+    background-color: color.adjust($main, $saturation: 5, $lightness: 8);
+    padding: 12px;
+    border-radius: 6px;
+}
+
 .nav-button {
-    border: 1px solid white;
+    border: 1px solid $border;
     padding: 6px;
     font-size: 1.5rem;
     margin-bottom: 16px;
-
-    
 
     &:hover {
         position: relative;
@@ -79,8 +145,21 @@ article {
 main {
     flex: 1;
     order: 2;
-    border: 1px solid white;
-    padding: 10px;
+    border: 1px solid $border;
+    padding: 12px;
+    background-color: $main;
+}
+
+nav {
+    padding: 8px;
+}
+
+.nav-button {
+    background-color: $main;
+
+    a:last-child & {
+        margin: 0;
+    }
 }
 
 aside {
@@ -90,12 +169,6 @@ aside {
     nav {
         position: sticky;
         top: 8px;
-        border: 1px solid white;
-        padding: 10px;
-
-        a:last-of-type .nav-button {
-            margin: 0;
-        }
     }
 
     &#left {
@@ -107,7 +180,13 @@ aside {
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1190px) {
+    aside#left {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
     details {
         display: block;
     }

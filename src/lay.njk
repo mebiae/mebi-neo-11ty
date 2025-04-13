@@ -13,60 +13,91 @@ layout: layout/other.njk
 </details>
 <div id="page">
     <header></header>
-    <div id="flex">
+    <div class="flex">
         <!--dummy sides-->
         <aside id="left"></aside>
         <main>
-            <h1>Greetings!</h1>
-            <p>g</p>
+            <article class="content">
+                <h1>Hey, hey! Hello!</h1>
+                <p>Greetings to my place on the world wide web!</p>
+            </article>
+
             <hr>
-            <section class="main-flex">
-                <article>
-                    <h2>`</h2>
-                    <p>s</p>
-                </article>
-                <article>
-                    <p>s</p>
-                </article>
-            </section>
-            <article>
-                <p>s</p>
-            </article>
-            <article>
-                <p>s</p>
-            </article>
-            <section class="main-flex">
-                <article>
-                    <p>s</p>
-                </article>
-                <article>
-                    <p>s</p>
+
+            <section class="container-unflex">
+                <h2>What's New?</h2>
+                <article class="content">
+                    <div id="updates">
+                        {% if collections.changelog %}
+                            {% for log in collections.changelog | reverse | limit(5) %}
+                                <h2>{{ log.date | UTCA }}</h2>
+                                {{ log.content | safe }}
+                            {% endfor %}
+                        {% else %}
+                            <h3>No updates to display.</h3>
+                        {% endif %}
+                    </div>
                 </article>
             </section>
-            <article>
-                <p>s</p>
-            </article>
+
+            <section class="flex-main">
+                <section class="container">
+                    <h2>Recent Blogs</h2>
+                    <article class="content">
+                        <p>yes</p>
+                    </article>
+                </section>
+                <section class="container">
+                    <h2>In My Mind...</h2>
+                    <article class="content">
+                        <p>yes</p>
+                    </article>
+                </section>
+            </section>
+
+            <section class="flex-main">
+                <section class="container">
+                    <h2>ytesg</h2>
+                    <article class="content">
+                        <p>yes</p>
+                    </article>
+                </section>
+                <section class="container">
+                    <h2>ytesg</h2>
+                    <article class="content">
+                        <p>yes</p>
+                    </article>
+                </section>
+            </section>
+
+            <section class="container-unflex">
+                <h2>ytesg</h2>
+                <article class="content">
+                    <p>yes</p>
+                </article>
+            </section>
+            
         </main>
         <aside id="right">
             <nav>
                 <a href="">
                     <div class="nav-button">
-                        Home
+                        Replace
                     </div>
                 </a>
                 <a href="">
                     <div class="nav-button">
-                        Home
+                        With
                     </div>
                 </a>
                 <a href="">
                     <div class="nav-button">
-                        Home
+                        Images
                     </div>
                 </a>
                 <a href="">
                     <div class="nav-button">
-                        Home
+                        !!!
                     </div>
                 </a>
             </nav>

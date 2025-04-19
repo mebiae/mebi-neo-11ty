@@ -1,0 +1,33 @@
+@use "sass:color";
+
+$main: rgb(32, 43, 38);
+$border: color.adjust($main, $saturation: 10, $lightness: 52);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/images/starry.gif");
+    image-rendering: pixelated;
+    color: white;
+    font-family: 'Nunito', sans-serif, 'Segoe UI';
+    font-size: 0.86em;
+    margin-top: 0;
+}
+
+#page {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid $border;
+    padding: 6px;
+    background-color: $main;
+}
+
+.flex {
+    display: flex;
+}
+
+main {
+    flex: 1;
+}

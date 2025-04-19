@@ -10,10 +10,43 @@ css: ewugh
 ---
 
 <div id="page">
-    <nav>nav</nav>
-    <header>cool banner or somethin</header>
+    <nav>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+        <a href="">Link</a>
+    </nav>
+    <header></header>
     <div class="flex">
-        <main>main</main>
+        <aside id="left">
+            <article class="content">
+                <p>werfy8g</p>
+            </article>
+        </aside>
+        <main>
+            <article class="content">
+                <p>werfy8g</p>
+            </article>
+            
+            <section class="container">
+                <article class="content-flex">
+                    <p>werfy8g</p>
+                </article>
+                <article class="content-flex">
+                    <p>werfy8g</p>
+                </article>
+            </section>
+
+            <article class="content">
+                <p>werfy8g</p>
+            </article>
+        </main>
+        <aside id="right">
+            <article class="content">
+                <p>werfy8g</p>
+            </article>
+        </aside>
     </div>
-    <footer>footer</footer>
+    {% include "partials/footer.njk" %}
 </div>

@@ -3,6 +3,8 @@
 $main: rgb(32, 43, 38);
 $border: color.adjust($main, $saturation: 10, $lightness: 52);
 
+////////////////////////////////
+
 * {
     box-sizing: border-box;
 }
@@ -13,21 +15,120 @@ body {
     color: white;
     font-family: 'Nunito', sans-serif, 'Segoe UI';
     font-size: 0.86em;
-    margin-top: 0;
 }
 
 #page {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    border: 1px solid $border;
     padding: 6px;
     background-color: $main;
 }
 
+aside {
+    width: 250px;
+}
+
+#left {
+    order: 1;
+}
+
+#right {
+    order: 3;
+}
+
 .flex {
     display: flex;
+    background: rgb(28, 37, 33);
+    padding: 6px;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 6px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.content {
+    padding: 12px;
+    background: $main;
+    margin-bottom: 6px;
+
+    &-flex {
+        @extend .content;
+        width: 100%;
+        margin-right: 6px;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+nav {
+    padding: 6px;
+    position: sticky;
+    top: 0;
+    background: rgb(28, 37, 33);
+}
+
+header {
+    background: url("/images/placeholders/banner-ph.png");
+    background-position: center;
+    height: 200px;
 }
 
 main {
     flex: 1;
+    order: 2;
+    padding: 0 6px;
+}
+
+footer {
+    padding: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 960px) {
+    aside {
+        width: 200px;
+    }
+}
+
+@media (max-width: 825px) {
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 0;
+        margin-bottom: 6px;
+    }
+
+    #left {
+        order: 4;
+        margin-top: 6px;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    body {
+        margin: 0;
+    }
 }

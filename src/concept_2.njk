@@ -21,30 +21,45 @@ css: ewugh
     <div class="flex">
         <aside id="left">
             <article class="content">
-                <p>werfy8g</p>
+                <p>this is left</p>
             </article>
         </aside>
         <main>
             <article class="content">
+                <h1>yeah</h1>
                 <p>werfy8g</p>
             </article>
             
             <section class="container">
                 <article class="content-flex">
+                    <h2>Recent Blogs</h2>
                     <p>werfy8g</p>
                 </article>
                 <article class="content-flex">
+                    <h2>In My Mind...</h2>
                     <p>werfy8g</p>
                 </article>
             </section>
 
             <article class="content">
+                <h3>mhmm</h3>
                 <p>werfy8g</p>
             </article>
         </main>
         <aside id="right">
             <article class="content">
-                <p>werfy8g</p>
+                <h2>Updates</h2>
+                <div id="updates">
+                    {% if collections.changelog %}
+                        {% for log in collections.changelog | reverse | limit(5) %}
+                            <h2>{{ log.date | UTCA }}</h2>
+                            {{ log.content | safe }}
+                            <hr>
+                        {% endfor %}
+                    {% else %}
+                        <h3>No updates to display.</h3>
+                    {% endif %}
+                </div>
             </article>
         </aside>
     </div>

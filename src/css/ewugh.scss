@@ -25,7 +25,7 @@ body {
 }
 
 aside {
-    width: 250px;
+    width: 230px;
 }
 
 #left {
@@ -34,6 +34,23 @@ aside {
 
 #right {
     order: 3;
+}
+
+#updates {
+    max-height: 150px;
+    overflow: auto;
+
+    ul {
+        padding-left: 25px;
+    }
+
+    hr:last-child {
+        display: none;
+    }
+}
+
+hr {
+    border: 1px solid rgb(28, 37, 33);
 }
 
 .flex {
@@ -72,6 +89,14 @@ aside {
     }
 }
 
+h1,h2,h3 {
+    margin-top: 0.38em;
+}
+
+h1 {
+    font-size: 1.875em;
+}
+
 nav {
     padding: 6px;
     position: sticky;
@@ -97,6 +122,8 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
+    margin-top: 6px;
+    background: rgb(28, 37, 33);
 
     p {
         margin: 0;

@@ -37,20 +37,24 @@ aside {
 }
 
 #updates {
-    max-height: 150px;
+    max-height: 200px;
     overflow: auto;
+
+    h2 {
+        margin: 0.38em 0;
+    }
 
     ul {
         padding-left: 25px;
-    }
-
-    hr:last-child {
-        display: none;
     }
 }
 
 hr {
     border: 1px solid rgb(28, 37, 33);
+
+    &:last-child {
+        display: none;
+    }
 }
 
 .flex {
@@ -87,6 +91,14 @@ hr {
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.blog {
+    color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1,h2,h3 {

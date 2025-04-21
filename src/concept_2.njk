@@ -9,6 +9,8 @@ layout: layout/other.njk
 css: ewugh
 ---
 
+{#<script type="text/javascript" src="/js/updates-visitors.js"></script>#}
+
 <div id="page">
     <nav>
         <a href="">Link</a>
@@ -21,28 +23,36 @@ css: ewugh
     <div class="flex">
         <aside id="left">
             <article class="content">
-                <p>this is left</p>
+                <h2>In My Mind...</h2>
+                <p>werfy8g</p>
             </article>
         </aside>
         <main>
             <article class="content">
-                <h1>yeah</h1>
+                <h1>Greeting Box</h1>
                 <p>werfy8g</p>
             </article>
             
-            <section class="container">
-                <article class="content-flex">
-                    <h2>Recent Blogs</h2>
-                    <p>werfy8g</p>
-                </article>
-                <article class="content-flex">
-                    <h2>In My Mind...</h2>
-                    <p>werfy8g</p>
-                </article>
-            </section>
+            <article class="content">
+                <h2>Recent Blogs</h2>
+                {#{% if collections.blogs %}
+                    {% for post in collections.blogs | reverse | limit(3) %}
+                    <a href="{{ post.filePathStem }}">
+                        <article class="blog">
+                            <h2>{{ post.data.subtitle }}</h2>
+                            <p>{{ post.data.blog_description }}</p>
+                            <small>Posted on {{ post.date | UTCA }}</small>
+                        </article>
+                    </a>
+                    <hr>
+                    {% endfor %}
+                {% else %}
+                    <p>Hm, no blog posts, for now.</p>
+                {% endif %}#}
+            </article>
 
             <article class="content">
-                <h3>mhmm</h3>
+                <h3>Somethin' Else</h3>
                 <p>werfy8g</p>
             </article>
         </main>
@@ -60,6 +70,8 @@ css: ewugh
                         <h3>No updates to display.</h3>
                     {% endif %}
                 </div>
+                <hr>
+                <p><b>Last updated: </b><span id="lastupdate"></span></p>
             </article>
         </aside>
     </div>

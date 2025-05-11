@@ -29,7 +29,14 @@
 
         <meta property="og:image" content="https://afellowu.neocities.org/images/thumbnail.png" />
         <meta property="twitter:card" content="summary_large_image">
-        <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        
+        {% if css %}
+            <link rel="stylesheet" type="text/css" href="/css/{{css}}.css" />
+        {% else %}
+            <link rel="stylesheet" type="text/css" href="/css/main.css" />
+        {% endif %}
+
+        <script type="text/javascript" src="/js/dropdown.js"></script>
     </head>
     <body>
         {{ content | safe }}

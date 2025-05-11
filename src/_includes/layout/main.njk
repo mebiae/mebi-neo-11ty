@@ -2,8 +2,9 @@
 layout: layout/responsive.njk
 ---
 
+{% include "../partials/navbar.njk" %}
 <header></header>
-<div id="flex">
+<div class="flex">
     {{ content | safe }}
 </div>
 {% include "../partials/footer.njk" %}

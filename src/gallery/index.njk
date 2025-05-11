@@ -9,6 +9,8 @@ layout: layout/main.njk
 ---
 
 <link rel="stylesheet" href="/css/photoviewer.css">
+<script src="https://unpkg.com/photoviewer@3.6.2/dist/photoviewer.min.js"></script>
+<script src="/js/gallery.js"></script>
 
 <style>
     /***
@@ -45,15 +47,9 @@ Released under the Unlicense - https://unlicense.org/
 </style>
 
 <main>
-    <h1>LOL</h1>
-    <section>
+    <article class="content">
+        <h1>LOL</h1>
         <p>gallery text</p>
-    </section>
+    </article>
 </main>
 
-<aside id="right">
-    {% include "partials/navbar.njk" %}
-</aside>
-
-<script src="https://unpkg.com/photoviewer@3.6.2/dist/photoviewer.min.js"></script>
-<script src="/js/gallery.js"></script>

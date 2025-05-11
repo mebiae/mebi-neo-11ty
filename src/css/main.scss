@@ -1,296 +1,224 @@
-// SCSS Variables
+@use "sass:color";
 
-$shiny-bar: linear-gradient(0deg,rgba(0,0,0,0.2) 0%, rgba(149,149,149,0.3) 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.2) 100%);
+$main: rgb(32, 43, 38);
+$darker: color.adjust($main, $saturation: -2, $lightness: -3);
 
-$text-white: rgb(249, 255, 252);
-
-$main-light-green: rgb(156, 190, 172);
-$main-evergreen: rgb(18, 34, 24);
-$border-blue: rgb(148, 185, 230);
-$border-navy: rgb(26, 43, 65);
-
-// SCSS
-
-@mixin box($border: none, $background: none) {
-    border: 1px solid $border;
-    background: $background;
-}
-
-// Main CSS
+////////////////////////////////
 
 * {
     box-sizing: border-box;
-    scrollbar-color: $main-light-green $main-evergreen;
 }
 
-html {
-    display: flex;
-    justify-content: center;
-}
-
-body {  
-    color: $text-white;
-    background: linear-gradient(rgb(21, 31, 44), rgb(10, 22, 18));
-    background-attachment: fixed;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "Lucida Grande", "Tahoma", sans-serif;
-    margin: 0;
-    width: 1100px;
-    font-size: 0.875em;
-}
-
-#flex {
-    display: flex;
+body {
+    background-image: url("/images/starry.gif");
+    image-rendering: pixelated;
+    color: white;
+    font-family: 'Nunito', sans-serif, 'Segoe UI';
+    font-size: 0.86em;
 }
 
 #page {
-    @include box($main-light-green, rgba(36, 46, 40, 0.5));
-    margin: 8px;
-    padding: 8px;
-    backdrop-filter: saturate(300%);
-    border-radius: 8px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6px;
+    background-color: $main;
 }
 
-#overlay {
-    background: rgba(34, 50, 70, 0.75);
-    position: relative;
-    bottom: 25em;
-    height: 120vh;
-    z-index: -100;
+aside {
+    width: 230px;
+}
+
+#left {
+    order: 1;
+    padding-right: 6px;
+}
+
+#right {
+    order: 3;
+    padding-left: 6px;
 }
 
 #updates {
     max-height: 200px;
     overflow: auto;
 
-    ul {
-        padding-left: 20px;
+    h2 {
+        margin: 0.38em 0;
+    }
 
-        li {
-            margin: 5px 0;
+    ul {
+        padding-left: 25px;
+    }
+}
+
+#button-snippet {
+    resize: none;
+    height: 80px;
+    color: inherit;
+    background: $main;
+    border: 2px solid $darker;
+}
+
+hr {
+    border: 1px solid $darker;
+
+    &:last-child {
+        display: none;
+    }
+}
+
+.flex {
+    display: flex;
+    background: $darker;
+    padding: 6px;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 6px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.content {
+    padding: 12px;
+    background: $main;
+    margin-bottom: 6px;
+
+    &-flex {
+        @extend .content;
+        width: 100%;
+        margin-right: 6px;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.blog {
+    color: white;
+}
+
+.drop {
+    display: inline-block;
+    position: relative;
+
+    &-button {
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        font-family: inherit;
+        background: none;
+        font-size: 17px;
+    }
+
+    &-content {
+        position: absolute;
+        background: $darker;
+        width: 130px;
+        display: none;
+
+        a {
+            display: block;
+            margin: 5px;
         }
     }
 }
 
-#pfp-base {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    #pfp {
-        border-radius: 500px;
-        max-width: 120px;
-        border: 1px solid $border-blue;
-    }
-
-    h3,
-    p {
-        margin: 2px;
-    }
-}
-
-header,
-aside,
-footer,
-main section {
-    padding: 10px
-}
-
-header {
-    @include box($main-light-green, url("/images/placeholders/banner-ph.png"));
-    margin-bottom: 8px;
-    background-position: center;
-    height: 120px;
-}
-
-h1,
-h2 {
-    margin: 0;
-    padding: 4px 8px;
-    backdrop-filter: saturate(250%) brightness(95%);
-}
-
-h1 {
-    /*
-    padding: 4px 12px 8px;
-    background-color: #686868;*/
-    font-size: 1.5em;
-}
-
-h2 {
-    font-size: 1.25em;
-}
-
 p {
-    line-height: 1.625em;
+    line-height: 1.5em;
 }
 
 a {
     text-decoration: none;
-    color: $border-blue;
+}
 
-    article {
-        padding: 10px;
-        color: $text-white;
+h1,h2,h3 {
+    margin-top: 0.38em;
+}
 
-        &:hover {
-            position: relative;
-            top: -4px;
-        }
-    }
+h1 {
+    font-size: 1.875em;
+}
 
-    &:hover {
-        color: rgb(108, 255, 172);
-        text-decoration: underline;
+nav {
+    padding: 6px;
+    position: sticky;
+    top: 0;
+    background: $darker;
+    font-size: 1.2em;
+
+    button::before,
+    a::before {
+        content: "+ ";
     }
 }
 
-hr {
-    border: none;
-    border-bottom: 1px solid $main-light-green;
-    margin: 0;
-}
-
-marquee {
-    padding-top: 5px;
+header {
+    background: url("/images/placeholders/banner-ph.png");
+    background-position: center;
+    height: 200px;
 }
 
 main {
     flex: 1;
     order: 2;
-    border: 1px solid $main-light-green;
-    background-color: $main-evergreen;
-
-    h1,
-    h2 {
-        background-color: rgb(36, 90, 67);
-    }
-}
-
-aside {
-    @include box($border-blue, $border-navy);
-
-    &#left {
-        order: 1;
-        margin-right: 8px;
-    }
-
-    &#right {
-        order: 3;
-        margin-left: 8px;
-    }
-
-    article {
-        padding: 8px;
-    }
-
-    h1,
-    h2 {
-        background-color: rgb(39, 68, 105);
-    }
-
-    section {
-        @include box($border-blue, $border-navy);
-        width: 200px;
-        margin-top: 10px;
-
-        &:first-of-type {
-            margin: 0;
-        }
-    }
-}
-
-nav {
-    width: 200px;
-    @include box($border-blue, $border-navy);
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding-left: 30px;
-
-        > ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin: 6px 0;
-        }
-    }
-
-    & + section {
-        margin-top: 10px !important;
-    }
 }
 
 footer {
-    @include box($main-light-green, $main-evergreen);
+    padding: 6px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 6px;
+    background: $darker;
 
     p {
         margin: 0;
     }
 }
 
-body > details {
-    display: none;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
-
-    summary {
-        list-style-type: none;
-        background: $border-navy;
-        padding: 10px;
-
-        &::before {
-            content: "☰";
-            font-size: 1.5em;
-        }
+@media (max-width: 960px) {
+    aside {
+        width: 200px;
     }
 }
 
-@media (max-width: 850px) {
-    #page {
-        margin-top: 3.5rem;
+@media (max-width: 825px) {
+    .flex {
+        flex-wrap: wrap;
     }
 
-    #flex {
-        flex-wrap: wrap;
+    main:not(:last-child) {
+        padding: 0;
+        margin-bottom: 6px;
+    }
+
+    #left,
+    #right {
+        padding: 0;
+    }
+
+    #left {
+        order: 4;
+        margin-top: 6px;
     }
 
     aside {
         width: 100%;
-        margin: 8px 0 0 !important;
-
-        section {
-            width: 100%;
-        }
-
-        nav {
-            display: none;
-        }
-
-        &#left {
-            order: 3;
-        }
     }
 
-    body > details {
-        display: block;
-    }
-
-    details > nav {
-        font-size: 1.25em;
-
-        li {
-            margin: 8px 0;
-        }
+    body {
+        margin: 0;
     }
 }

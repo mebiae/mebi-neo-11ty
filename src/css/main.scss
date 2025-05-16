@@ -110,21 +110,14 @@ hr {
 .drop {
     display: inline-block;
     position: relative;
-
-    &-button {
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        font-family: inherit;
-        background: none;
-        font-size: 17px;
-    }
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 17px;
 
     &-content {
         position: absolute;
         background: $darker;
         width: 130px;
-        display: none;
 
         a {
             display: block;
@@ -156,9 +149,17 @@ nav {
     background: $darker;
     font-size: 1.2em;
 
-    button::before,
+    summary::marker {
+        content: none;
+    }
+
+    summary::before,
     a::before {
         content: "+ ";
+    }
+
+    details {
+        display: inline-block;
     }
 }
 

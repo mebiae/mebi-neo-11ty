@@ -31,7 +31,9 @@
         <meta property="twitter:card" content="summary_large_image">
         
         {% if css %}
-            <link rel="stylesheet" type="text/css" href="/css/{{css}}.css" />
+            {% for css_list in css %}
+                <link rel="stylesheet" type="text/css" href="/css/{{css_list}}.css" />
+            {% endfor %}
         {% else %}
             <link rel="stylesheet" type="text/css" href="/css/main.css" />
         {% endif %}

@@ -24,6 +24,10 @@ layout: layout/main.njk
             </a>        
         </textarea>
     </article>
+    <article class="content">
+        <h2>NAME_HERE Says...</h2>
+        <p>werfy8g</p>
+    </article>
 </aside>
 <main>
     <article class="content">
@@ -33,7 +37,7 @@ layout: layout/main.njk
 
     <article class="content">
         <h2>Recent Blogs</h2>
-        {#{% if collections.blogs %}
+        {% if collections.blogs %}
             {% for post in collections.blogs | reverse | limit(3) %}
             <a href="{{ post.filePathStem }}">
                 <article class="blog">
@@ -42,11 +46,10 @@ layout: layout/main.njk
                     <small>Posted on {{ post.date | UTCA }}</small>
                 </article>
             </a>
-            <hr>
             {% endfor %}
         {% else %}
             <p>Hm, no blog posts, for now.</p>
-        {% endif %}#}
+        {% endif %}
     </article>
 
     <article class="content">

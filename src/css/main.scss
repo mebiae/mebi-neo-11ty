@@ -39,7 +39,7 @@ aside {
 }
 
 #updates {
-    max-height: 200px;
+    max-height: 300px;
     overflow: auto;
 
     h2 {
@@ -103,8 +103,15 @@ hr {
     }
 }
 
+a:has(.blog):last-child .blog {
+    margin: 0;
+}
+
 .blog {
     color: white;
+    border: 2px solid $darker;
+    padding: 6px;
+    margin-bottom: 12px;
 }
 
 .drop {

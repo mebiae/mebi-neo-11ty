@@ -5,10 +5,38 @@ subtitle:
 meta_title:
 meta_description:
 
-layout: layout/responsive.njk
+layout: layout/base.njk
 ---
 
+<style>
+    main {
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        padding: 1em;
+        text-align: center;
+    }
+
+    img {
+        animation: 14s rotate infinite linear;
+    }
+
+    p {
+        margin-bottom: 10rem;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
 <main>
-    <p>oopsie woopsie!</p>
+    <p>Oops! No page</p>
     <img src="/images/placeholders/spong.jpg" alt="spoenjg bobe">
 </main>

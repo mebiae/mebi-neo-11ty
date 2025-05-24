@@ -77,7 +77,10 @@ layout: layout/main.njk
             <p class="indent">{{ blogdesc }}</p>
             <p><b>Posted on:</b> {{ page.date.toLocaleDateString("en-CA") }}</p>
         </div>
-        {{ content | safe }}
+        
+        <article class="content">
+            {{ content | safe }}
+        </article>
 
         <div class="blognav">
             {% if prevPost %}<a class="nav" href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>{% endif %}

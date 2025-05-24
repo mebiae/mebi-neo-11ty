@@ -2,6 +2,7 @@
 
 $main: rgb(32, 43, 38);
 $darker: color.adjust($main, $saturation: -2, $lightness: -3);
+$lighter: color.adjust($main, $saturation: 70, $lightness: 60);
 
 ////////////////////////////////
 
@@ -15,17 +16,18 @@ body {
     color: white;
     font-family: 'Nunito', sans-serif, 'Segoe UI';
     font-size: 0.86em;
+    word-break: break-word;
 }
 
 #page {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 6px;
     background-color: $main;
 }
 
 aside {
-    width: 230px;
+    width: 240px;
 }
 
 #left {
@@ -136,8 +138,14 @@ p {
     line-height: 1.5em;
 }
 
+nav summary,
 a {
     text-decoration: none;
+    color: $lighter;
+
+    &:hover {
+        color: color.adjust($lighter, $lightness: -35);
+    }
 }
 
 h1,h2,h3 {
@@ -166,6 +174,10 @@ nav {
 
     details {
         display: inline-block;
+    }
+
+    a,details {
+        margin-right: 5px;
     }
 }
 

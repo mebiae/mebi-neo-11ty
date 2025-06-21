@@ -10,6 +10,21 @@ layout: layout/main.njk
 
 <main>
     <article class="content">
+        <h1>Changelog</h1>
+        <div id="updates">
+            {% if collections.changelog %}
+                {% for log in collections.changelog | reverse | limit(5) %}
+                    <h2>{{ log.date | UTCA }}</h2>
+                    {{ log.content | safe }}
+                    <hr>
+                {% endfor %}
+            {% else %}
+                <h3>No updates to display.</h3>
+            {% endif %}
+        </div>
+    </article>
 
+    <article class="content">
+        <h1>the legacy changelog go here dumb</h1>
     </article>
 </main>

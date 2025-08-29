@@ -17,6 +17,11 @@ module.exports = function(eleventyConfig) {
       outputFileExtension: "css",
 
       compile: async function(_inputContent, inputPath) {
+        let parsed = path.parse(inputPath);
+
+        if (parsed.name.startsWith("_")) {
+          return;
+        }
         
         let targets = browserslistToTargets(browserlist("> 0.2% and not dead"))
 
@@ -41,6 +46,10 @@ module.exports = function(eleventyConfig) {
 
       compile: async function(_inputContent, inputPath) {
         let parsed = path.parse(inputPath);
+
+        if (parsed.name.startsWith("_")) {
+          return;
+        }
 
         let result = sass.compileString(_inputContent, {
           loadPaths: [parsed.dir || "."],
@@ -67,7 +76,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/images");
     eleventyConfig.addPassthroughCopy("./src/fonts");
     eleventyConfig.addPassthroughCopy("./src/js");
-    eleventyConfig.addPassthroughCopy("./src/robots.txt");
+    eleventyConfig.addPassthroughCopy("./src/*.txt");
 
     eleventyConfig.setTemplateFormats([
       "njk",

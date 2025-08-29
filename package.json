@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.1-alpha.4",
+    "@11ty/eleventy": "^3.1.0",
     "browserslist": "^4.24.4",
     "sass": "^1.85.1"
   },

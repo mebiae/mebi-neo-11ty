@@ -9,9 +9,6 @@ layout: layout/main.njk
 css: [main, photoviewer]
 ---
 
-<script src="https://unpkg.com/photoviewer@3.6.2/dist/photoviewer.min.js"></script>
-<script src="/js/gallery.js"></script>
-
 <style>
     /***
 EZ Gallery by netfriend - https://netfriend.neocities.org/ez-gallery/
@@ -30,7 +27,7 @@ Released under the Unlicense - https://unlicense.org/
 }
 
 .ezgallery.horizontal img {
-    border: 2px solid var(--box-border);
+    border: 2px solid #1a221e;
     text-align: center;
     vertical-align: middle;
     margin: 0 5px 5px 0;
@@ -48,10 +45,44 @@ Released under the Unlicense - https://unlicense.org/
 
 <main>
     <article class="content">
-        <h1>LOL</h1>
-        <p>gallery text</p>
-        
-        <button onclick="pain.showModal()">Yes</button>
+        <h1>Gallery</h1>
+        <p>At the moment, the images are ripped out of my <a href="https://bsky.app/profile/mebiae.bsky.social">Bluesky</a> account; so the quality is considerably compressed. It'll be replaced with higher quality images at some point.</p>
+    </article>
+
+    <article class="content" style="text-align: center;">
+        <h1>2025</h1>
+        <div class="ezgallery horizontal">
+            <a href="/images/gallery/2025/my_truck.jpg">
+                <img src="/images/gallery/2025/thumbnails/my_truck.webp" alt="Lucero the bunny gets ran over">
+            </a>
+            <a href="/images/gallery/2025/night_moth.jpg">
+                <img src="/images/gallery/2025/thumbnails/night_moth.webp" alt="Ruoxi the moth takes flight in the night">
+            </a>
+            <a href="/images/gallery/2025/trio.jpg">
+                <img src="/images/gallery/2025/thumbnails/trio.webp" alt="The trio: Mebi, Tebi, and Lucero">
+            </a>
+            <a href="/images/gallery/2025/tropie_bd.jpg">
+                <img src="/images/gallery/2025/thumbnails/tropie_bd.webp" alt="Tropie's birthday">
+            </a>
+            <a href="/images/gallery/2025/skirt.jpg">
+                <img src="/images/gallery/2025/thumbnails/skirt.webp" alt="Mebi wears a skirt">
+            </a>
+            <a href="/images/gallery/2025/can.jpg">
+                <img src="/images/gallery/2025/thumbnails/can.webp" alt="Mebi holds the flag of Canada during Canada Day">
+            </a>
+            <a href="/images/gallery/2025/uhh.jpg">
+                <img src="/images/gallery/2025/thumbnails/uhh.webp" alt="Sudden grayscale; companies on July 1st moment">
+            </a>
+            <a href="/images/gallery/2025/demi.jpg">
+                <img src="/images/gallery/2025/thumbnails/demi.webp" alt="Mebi reveals they are a demiboy">
+            </a>
+            <a href="/images/gallery/2025/droob.jpg">
+                <img src="/images/gallery/2025/thumbnails/droob.webp" alt="Droobert the gay bee (not my oc)">
+            </a>
+            <a href="/images/gallery/2025/gay_love.jpg">
+                <img src="/images/gallery/2025/thumbnails/gay_love.webp" alt="Kissing as the ship sinks">
+            </a>
+        </div>
     </article>
 
     <section class="container">
@@ -60,8 +91,5 @@ Released under the Unlicense - https://unlicense.org/
     </section>
 </main>
 
-<dialog id="pain">
-    <p>Yeag</p>
-    <button onclick="pain.close()">Yes</button>
-</dialog>
-
+<script src="https://unpkg.com/photoviewer@3.6.2/dist/photoviewer.min.js"></script>
+<script src="/js/gallery.js"></script>

@@ -9,12 +9,27 @@ layout: layout/main.njk
 css: [main, aside]
 ---
 
-{#<script type="text/javascript" src="/js/updates-visitors.js"></script>#}
+<style>
+    #statuscafe {
+        border: 2px solid #1a221e;
+        padding: 6px;
+    }
+
+    #statuscafe-username {
+        margin-bottom: 6px;
+    }
+</style>
+
+<script type="text/javascript" src="/js/updates-visitors.js"></script>
+<script src="https://status.cafe/current-status.js?name=mebiae" defer=""></script>
 
 <aside id="left">
     <article class="content">
         <h2>In My Mind...</h2>
-        <p>Loading...</p>
+        <div id="statuscafe">
+            <div id="statuscafe-username"></div>
+            <div id="statuscafe-content">Loading...</div>
+        </div>
     </article>
     <article class="content" style="text-align: center;">
         <h2>My Button!</h2>
@@ -25,10 +40,10 @@ css: [main, aside]
             </a>        
         </textarea>
     </article>
-    <article class="content">
+    {#<article class="content">
         <h2>NAME_HERE Says...</h2>
         <p>werfy8g</p>
-    </article>
+    </article>#}
 </aside>
 <main>
     <article class="content">
@@ -53,10 +68,10 @@ css: [main, aside]
         {% endif %}
     </article>
 
-    <article class="content">
+    {#<article class="content">
         <h3>Somethin' Else</h3>
         <p>werfy8g</p>
-    </article>
+    </article>#}
 </main>
 <aside id="right">
     <article class="content">

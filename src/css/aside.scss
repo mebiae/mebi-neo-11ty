@@ -12,13 +12,21 @@ aside {
     padding-left: 6px;
 }
 
-.size {
+.narrow {
     width: 200px;
+}
+
+.widened {
+    width: 300px;
 }
 
 @media (max-width: 960px) {
     aside {
         width: 200px;
+
+        &.widened {
+            width: 240px;
+        }
     }
 }
 
@@ -37,11 +45,17 @@ aside {
         width: 100% !important;
     }
 
-    main:has(+ aside.disappear)  {
+    main:has(+ aside.disappear),
+    main:has(+ aside.top)  {
         margin: 0;
     }
 
     .disappear {
         display: none;
+    }
+
+    .top {
+        order: 0 !important;
+        margin-bottom: 6px;
     }
 }

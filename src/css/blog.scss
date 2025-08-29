@@ -1,0 +1,55 @@
+.blogposts {
+        margin: 2em 0;
+}
+
+.blognav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.blognav .nav {
+    text-align: center;
+    background-color: #141a3e;
+    padding: 1em;
+}
+
+.indent {
+   padding-left: 1.5em;
+}
+
+.head-box {
+    border-bottom: 2px solid var(--box-border);
+}
+
+li {
+    margin: 1em 0;
+}
+
+hr {
+    margin: 2em 0;
+}
+
+pre,code {
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 90%;
+}
+
+code {
+    padding: .1em .3em;
+    background-color: #1a1a1a;
+}
+
+pre code {
+    background-color: #1a1a1a;
+    padding: 1em;
+    display: inline-block;
+    font-size: 102%;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+h3 {
+    margin-top: 2em;
+}

@@ -1,8 +1,5 @@
 @use "sass:color";
-
-$main: rgb(32, 43, 38);
-$darker: color.adjust($main, $saturation: -2, $lightness: -3);
-$lighter: color.adjust($main, $saturation: 70, $lightness: 60);
+@use "modules/colors" as *;
 
 ////////////////////////////////
 

@@ -1,0 +1,36 @@
+---
+title: Mebi County
+subtitle: Blogs
+
+meta_title:
+meta_description:
+
+layout: layout/main.njk
+css: [main, aside]
+---
+
+<main>
+    <article class="content">
+        {% if collections.blogs %}
+            {% for post in collections.blogs | reverse %}
+            <a href="{{ post.filePathStem }}">
+                <article class="blog">
+                    <h2>{{ post.data.subtitle }}</h2>
+                    <p>{{ post.data.blog_description }}</p>
+                    <small>Posted on {{ post.date | UTCA }}</small>
+                </article>
+            </a>
+            {% endfor %}
+        {% else %}
+            <p>Hm, no blog posts, for now.</p>
+        {% endif %}
+    </article>
+</main>
+
+<aside id="right" class="widened top">
+    <article class="content">
+        <h1>Blogs</h1>
+        <p>The place where I talk about anything. From life, guides, to uh... yeah whatever else.</p>
+        <p>Listed from newest above, oldest below.</p>
+    </article>
+</aside>

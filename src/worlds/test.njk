@@ -1,0 +1,52 @@
+---
+title: Mebi County
+subtitle:
+
+meta_title:
+meta_description:
+
+layout: layout/base.njk
+---
+
+<style>
+    main {
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        padding: 1em;
+        text-align: center;
+    }
+
+    .carousel-base {
+        margin: 0 auto;
+        width: 250px;
+        padding: 20px;
+        display: flex;
+        gap: 4vw;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(255, 255, 255) rgba(0, 128, 0, 0);
+    }
+
+    .carousel-item {
+        scroll-snap-align: center;
+        list-style-type: none;
+        flex: 0 0 100%;
+    }
+</style>
+
+<main>
+    <h1>Into the vast Mebiverse...</h1>
+    <p>Select a world and venture forth...</p>
+    <small>(its scrollable)</small>
+
+    <ul class="carousel-base">
+        <li class="carousel-item">
+            <img src="/images/placeholders/heavy.webp" alt="heavy tf2">
+        </li>
+        <li class="carousel-item">
+            <img src="/images/placeholders/heavy.webp" alt="heavy tf2">
+        </li>
+    </ul>
+</main>

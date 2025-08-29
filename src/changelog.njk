@@ -13,7 +13,7 @@ layout: layout/main.njk
         <h1>Changelog</h1>
         <div id="updates">
             {% if collections.changelog %}
-                {% for log in collections.changelog | reverse | limit(5) %}
+                {% for log in collections.changelog | reverse %}
                     <h2>{{ log.date | UTCA }}</h2>
                     {{ log.content | safe }}
                     <hr>
@@ -25,6 +25,7 @@ layout: layout/main.njk
     </article>
 
     <article class="content">
-        <h1>the legacy changelog go here dumb</h1>
+        <h1>Legacy Changelog</h1>
+        <p>Currently moved to a <a href="/legacy_changelog.txt">seperate page</a> as a raw text file.</p>
     </article>
 </main>

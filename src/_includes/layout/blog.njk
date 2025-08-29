@@ -2,89 +2,48 @@
 title: MebiBlogs
 
 layout: layout/main.njk
+
+css: [main, blog]
 ---
-
-<style>
-    .blogposts {
-        margin: 2em 0;
-    }
-
-    .blognav {
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-    }
-
-    .blognav .nav {
-        text-align: center;
-        background-color: #141a3e;
-        padding: 1em;
-    }
-
-    .indent {
-        padding-left: 1.5em;
-    }
-
-    .head-box {
-        border-bottom: 2px solid var(--box-border);
-    }
-
-    li {
-        margin: 1em 0;
-    }
-
-    hr {
-        margin: 2em 0;
-    }
-
-    pre,code {
-        border-radius: 5px;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 90%;
-    }
-
-    code {
-        padding: .1em .3em;
-        border: 1px solid var(--a-hover);
-        color: #fff;
-    }
-
-    pre code {
-        background-color: #1a1a1a;
-        padding: 1em;
-        display: inline-block;
-        font-size: 102%;
-        white-space: pre-wrap;
-        word-break: break-all;
-    }
-
-    h3 {
-        margin-top: 2em;
-    }
-</style>
 
 {% set prevPost = collections.blogs | getPreviousCollectionItem %}
 {% set nextPost = collections.blogs | getNextCollectionItem %}
 
 <main>
     <article>
-		<div class="blognav" style="justify-content: space-between;">
-			{% if prevPost %}<a href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>{% else %}<span style="color: #444444;">X-- End of list</span>{% endif %}
-        	{% if nextPost %}<a href="{{ nextPost.filePathStem }}">Next Post --&gt;</a>{% else %}<span style="color: #444444;">End of list --X</span>{% endif %}
-		</div>
-        <div class="head-box">
-            <h1>{{ sub }}</h1>
-            <p class="indent">{{ blogdesc }}</p>
-            <p><b>Posted on:</b> {{ page.date.toLocaleDateString("en-CA") }}</p>
-        </div>
+		<article class="content">
+            <div class="blognav" style="justify-content: space-between;">
+                {% if prevPost %}
+                    <a href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>
+                {% else %}
+                    <span style="color: #444444;">X-- End of list</span>
+                {% endif %}
+
+                {% if nextPost %}
+                    <a href="{{ nextPost.filePathStem }}">Next Post --&gt;</a>
+                {% else %}  
+                    <span style="color: #444444;">End of list --X</span>
+                {% endif %}
+            </div>
+        </article>
+
+        <article class="content">
+            <div class="head-box">
+                <h1>{{ subtitle }}</h1>
+                <p class="indent">{{ blog_description }}</p>
+                <p><b>Posted on:</b> {{ page.date.toLocaleDateString("en-CA") }}</p>
+            </div>
+        </article>
         
         <article class="content">
             {{ content | safe }}
         </article>
 
-        <div class="blognav">
-            {% if prevPost %}<a class="nav" href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>{% endif %}
-            {% if nextPost %}<a class="nav" href="{{ nextPost.filePathStem }}">Next Post --&gt;</a>{% endif %}
-        </div>
+        <article class="content">
+            <div class="blognav">
+                {% if prevPost %}<a class="nav" href="{{ prevPost.filePathStem }}">&lt;-- Previous Post</a>{% endif %}
+                {% if nextPost %}<a class="nav" href="{{ nextPost.filePathStem }}">Next Post --&gt;</a>{% endif %}
+            </div>
+        </article>
     </article>
 </main>

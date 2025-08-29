@@ -77,6 +77,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/fonts");
     eleventyConfig.addPassthroughCopy("./src/js");
     eleventyConfig.addPassthroughCopy("./src/*.txt");
+    eleventyConfig.addPassthroughCopy("./src/*.xml");
 
     eleventyConfig.setTemplateFormats([
       "njk",

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://afellowu.neocities.org/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Mebi County Placeholder Feed</title>
+        <link>https://afellowu.neocities.org/</link>
+        <atom:link href="https://afellowu.neocities.org/log_feed.xml" rel="self" type="application/rss+xml"/>
+        <description>Placerholder feed.</description>
+        <language>en-us</language>
+        <item>
+            <title>2024-10-27</title>
+            <link>https://afellowu.neocities.org/</link>
+            <description>
+                <![CDATA[<p>If you're seeing this then this changelog has been removed at the time being. Not sure if it'll be replaced/returned or not.</p>]]>
+            </description>
+            <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+            <dc:creator>Mebiae</dc:creator>
+            <guid>https://afellowu.neocities.org/</guid>
+        </item>
+    </channel>
+</rss>
